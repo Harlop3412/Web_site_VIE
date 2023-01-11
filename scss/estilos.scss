@@ -1,0 +1,472 @@
+/*******************utilidades_variables*********************/
+/*colors*/
+$col-primary: #042EBE;
+$col-secondary: white;
+$col-alternate: #000000;
+$col-ultimate: #E8EDED;
+$col-extra: #BCC2C6;
+$col-extra1: #969D9A;
+$col-extra2: #575E61;
+
+/*spacings*/
+$space-large: 6rem;
+$space-medium: 4rem;
+$space-smedium: 3rem;
+$space-small: 2rem;
+$space-ssmall: 1.5rem;
+$space-xsmall: 1rem;
+$space-xxsmall: .5rem;
+$space-border-bottom: 2px;
+
+/*font-sizes*/
+$text-xlarge: 5em;
+$text-large: 3.2em;
+$text-medium: 2.5em;
+$text-base: 1.9em;
+$text-small: 1.6em;
+$text-xsmall: 1.2em;
+
+/************** base_reset.scss***********************************/
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+        font-family: 'Roboto', sans-serif;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        // p {
+        //     margin: 0;
+        //     padding: 0;
+        //     box-sizing: border-box;
+        // }
+    }
+
+}
+
+/********************utilidades_funciones***********************************/
+@mixin flex1 ($direction, $justify, $aling, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+    flex-wrap: $wrap;
+}
+
+@mixin flex () {
+    display: flex;
+}
+
+
+/***************************** layout_header.scss*****************************/
+
+/*estilos del flex */
+.header__section1 {
+    @include flex1(row, space-around, flex-end, wrap);
+    padding: $space-xxsmall $space-small;
+    background-color: $col-primary;
+
+    .icono__phone {
+        /*estilos icono phone galeria bootstrap*/
+        @extend .fa-brands;
+        /*extend de class .fa-brands layout_header*/
+        padding-right: $space-ssmall;
+    }
+
+    /*clase para cambiar tamaños de iconoscolor redes fontawesome*/
+    .fa-brands {
+        font-weight: 500;
+        font-size: $text-medium;
+        color: $col-alternate;
+    }
+
+    /*hover de redes header*/
+    .fa-brands:hover {
+        color: $col-secondary;
+    }
+
+    /*clase estilos icono correo header*/
+    .fa-solid {
+        font-size: $text-medium;
+        color: $col-alternate;
+    }
+
+    /*hover de icono correo header*/
+    .fa-solid:hover {
+        color: $col-secondary;
+    }
+
+}
+
+/*estilos letra slogan*/
+.header__section1 p {
+    color: $col-secondary;
+    font-weight: bolder;
+    font-size: $text-small;
+
+}
+
+
+
+/*--estilos del menu nav --*/
+.nav__color {
+    background-color: $col-secondary;
+    border-bottom: solid $space-border-bottom $col-primary;
+
+    /*dar estilos de texto borde y sobre escribir color letra de enlaces a del nav (clase está en todas las secciones del menu de navegacion)  */
+    .color__texto1 {
+        text-align: center;
+        border: solid $col-primary 1px;
+        background-color: $col-primary;
+        border-radius: 5%;
+        font-weight: bolder;
+        font-size: $text-small;
+        margin: 0 $space-xxsmall ;
+        color: $col-secondary !important;
+    }
+
+    /*sobreescribir el color de la letra con hover del nav*/
+    .color__texto1:hover {
+        color: $col-alternate !important;
+    }
+
+    /*cambiar estilos del incono del menu de nav (clase de libreria fontawensome)   linea 76 html*/
+    .fa-solid {
+        font-weight: lighter;
+        font-size: $space-medium;
+        color: $col-alternate;
+    }
+
+    /*sobreescribir clase de bootstrap para quitar borde del icono del menu que aparece por defecto   linea 73 html*/
+    .navbar-toggler {
+        border: none;
+    }
+
+    /*sobreescribir clase de bootstrap para quitar el borde que se produce al hacer clic (:focus) en el menu  linea 73 html*/
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /*sobreescribir el flex de la clase para dar espacio entre logo y menú menu   linea 78 html*/
+    .nav__flex {
+        justify-content: space-around;
+    }
+}
+
+/******************************* layout_footer.scss****************************/
+
+/*estilos del contenedor padre del form1*/
+.footer__general1 {
+    background-image: url(/multimedia/footer_section1.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    /*espaciado inferior del form*/
+    form {
+        padding: 0 $space-xsmall $space-small $space-xsmall;
+    }
+
+    /*estilos generales del contenedor del form1*/
+    .estilos__form1 {
+        @include flex1(column, space-around, center, none);
+        margin-top: $space-small;
+    }
+
+    /*estilos de campos form1 section1*/
+    .imput__form1 {
+        font-size: $text-base;
+        font-weight: 500;
+    }
+
+    /*estilos legend del fieldset form1 section1*/
+    .legend__form1 legend {
+        @extend.imput__form1;
+    }
+
+}
+
+/*estilos de espaciado titulos form1 section 1*/
+.titulos__form1 {
+
+    // margin: $space-medium 0;
+    padding-top: $space-small;
+
+    /*estilos de tamaños p titulos form1 section 1*/
+    p {
+        font-size: $text-large;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+}
+
+/*estilos grid de telefono footer y mensaje 2*/
+.footer__phone-grid {
+    display: grid;
+    grid-template-areas:
+        'footer__phone-grid-area1 footer__phone-grid-area2';
+
+    .footer__phone-grid-area1 {
+        grid-area: 'footer__phone-grid-area1';
+    }
+
+    .footer__phone-grid-area2 {
+        grid-area: 'footer__phone-grid-area2';
+    }
+
+    /*estilos footer section telefonos*/
+    .footer__section1 {
+        @extend.titulos__form1;
+        margin: 0;
+        background-color: $col-primary;
+    }
+
+    /*estilos contenedor telefono-llamanos*/
+    .footer__aside {
+        @extend.footer__section1;
+        background-color: $col-secondary;
+
+        /* pading derecho icono telefono */
+        .estilos__icono-phone {
+            padding-right: $space-ssmall;
+        }
+
+    }
+}
+
+/*estidos generales section footer__mapa de sitio*/
+.footer__section-map {
+    @include flex1(row, space-around, flex-start, wrap);
+    background-color: $col-ultimate;
+    padding-top: $space-smedium;
+
+    /*tamaño inconos redes footer*/
+    .footer__section-redes {
+
+        a {
+            text-align: center;
+        }
+
+        i {
+            font-size: $text-large;
+        }
+
+    }
+
+    /*color :hover inconos redes footer*/
+    .footer__section-redes i:hover {
+        color: $col-primary;
+    }
+
+    /*ancho imagen logo-footer*/
+    .img__logo-footer {
+        // width: 70%;
+        margin-bottom: $space-smedium;
+    }
+
+    /*tamaño de letras footer-map*/
+    .footer__section-lista {
+        font-size: $text-small;
+        padding: $space-smedium;
+
+        /*pading de li*/
+        li {
+            padding-bottom: $space-xsmall;
+        }
+
+        /*pading de h2 de li*/
+        h2 {
+            padding-bottom: $space-xsmall;
+        }
+    }
+
+    /*estilos form-boletin*/
+    .footer__section-boletin {
+        font-size: $text-small;
+    }
+
+    /*color, sepatracion letra map*/
+    .footer__spam-letra {
+        color: $col-alternate;
+        margin-left: $space-xsmall;
+        font-weight: 500;
+    }
+
+    /*hover enlances (letras)map*/
+    .footer__spam-letra:hover {
+        color: $col-primary;
+    }
+
+}
+
+/*seccion aside-copyrigt footer*/
+.footer__aside-copy {
+    background-color: $col-ultimate;
+    font-size: $text-xsmall;
+    text-align: end;
+    padding: $space-xsmall;
+}
+
+
+
+/***************************componentes_botones.scss*************************/
+/*boton form1 section1*/
+.btn__form1 {
+    font-size: $text-base;
+    font-weight: lighter;
+    color: $col-secondary;
+    background-color: $col-primary;
+}
+
+
+
+
+
+
+
+/*************************utilidades_mediaquieries***************************/
+
+@media screen and (min-width: 1px) and (max-width: 540px) {
+
+    /************header****************/
+
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    // .header__section1-source {
+    //     position: sticky;
+    //     top: 0%;
+
+    // }
+
+
+    /*header dejar navbar-hamburguesa fijo 540*/
+    .navbar {
+        position: fixed;
+        z-index: 2;
+        background-color: transparent;
+
+        /*ancho de logo en menu ham 540*/
+        .header__navbar-logo {
+            // display: none;
+            width: 35%;
+        }
+    }
+
+
+
+    /************footer****************/
+
+    .footer__general1 {
+        padding-top: 3rem;
+    }
+
+    /*footer sacar el grid de llamanos 540*/
+    .footer__phone-grid {
+        display: none;
+    }
+
+    /*ancho y posicion logo footer 540*/
+    .img__logo-footer {
+        width: 70%;
+        position: relative;
+        left: 15%;
+
+    }
+
+
+}
+
+@media screen and (min-width: 541px) and (max-width: 720px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador despues de 720*/
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    /*header dejar navbar-hamburguesa fijo 720*/
+    .navbar {
+        position: fixed;
+        z-index: 1;
+        background-color: transparent;
+
+        /*ancho de logo en menu ham 720*/
+        .header__navbar-logo {
+            // display: none;
+            width: 35%;
+        }
+    }
+
+    /************footer****************/
+    /*footer sacar el grid de llamanos 720*/
+    .footer__phone-grid {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 991px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador hasta 992*/
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    /*header dejar navbar-hamburguesa fijo 991*/
+    .navbar {
+        position: fixed;
+        z-index: 1;
+        background-color: transparent;
+
+        /*ancho de logo en menu ham 991*/
+        .header__navbar-logo {
+            // display: none;
+            width: 35%;
+        }
+    }
+
+    /************footer****************/
+}
+
+@media screen and (min-width: 992px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    /************footer****************/
+    /*footer para que los elementos del mapa corten en <= 992px*/
+    .footer__section-map {
+        flex-wrap: nowrap;
+    }
+
+}

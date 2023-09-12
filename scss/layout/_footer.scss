@@ -1,0 +1,161 @@
+/*flex del form estilos img*/
+.footer__general1 {
+    background-image: url(/multimedia/footer_section1.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    /*estilos del form */
+    form  {
+        padding: 0 $space-xsmall $space-small $space-xsmall;
+        color: $col-secondary;
+        background-color: $col-form;
+        width: 50rem;
+        margin: 2rem 0 2rem 0;
+        border-radius: 1%
+
+    }
+
+    /*estilos generales del contenedor del form1*/
+    .estilos__form1 {
+        @include flex1(column, space-around, center, none);
+        margin-top: $space-small;
+    }
+
+    /*estilos de campos form1 section1*/
+    .imput__form1 {
+        font-size: $text-base;
+        font-weight: 500;
+    }
+
+    /*estilos legend del fieldset form1 section1*/
+    .legend__form1 legend {
+        font-size: $text-medium;
+        font-weight: 900;
+        // @extend.imput__form1;
+    }
+
+}
+
+/*estilos de espaciado titulos form1 section 1*/
+.titulos__form1 {
+
+    // margin: $space-medium 0;
+    padding-top: $space-small;
+
+    /*estilos de tamaños p titulos form1 section 1*/
+    p {
+        font-size: $text-large;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+}
+
+/*estilos grid de telefono footer y mensaje 2*/
+.footer__phone-grid {
+    display: grid;
+    grid-template-areas:
+        'footer__phone-grid-area1 footer__phone-grid-area2';
+
+    /*estilos footer section telefonos*/
+    .footer__section1 {
+        @extend.titulos__form1;
+        margin: 0;
+        background-color: $col-primary;
+        text-shadow: $space-shadow $space-border-bottom $space-border-bottom $col-alternate
+    }
+
+    /*estilos contenedor telefono-llamanos*/
+    .footer__aside {
+        @extend.footer__section1;
+        background-color: $col-secondary;
+
+        /* pading derecho icono telefono */
+        .estilos__icono-phone {
+            padding-right: $space-ssmall;
+        }
+
+    }
+}
+
+/*estidos generales section footer__mapa de sitio*/
+.footer__section-map {
+    @include flex1(row, space-around, flex-start, wrap);
+    background-color: $col-ultimate;
+    padding-top: $space-smedium;
+    
+    /*tamaño inconos redes footer*/
+    .footer__section-redes {
+
+        a {
+            text-align: center;
+        }
+
+        i {
+            font-size: $text-large;
+        }
+
+    }
+
+    /*color :hover inconos redes footer*/
+    .footer__section-redes i:hover {
+        color: $col-primary;
+    }
+
+    /*contenedor logo footer z-index menor pasa por detras del header*/
+    .logo__footer{
+        position: relative;
+        z-index: 10;
+    }
+
+    /*ancho imagen logo-footer*/
+    .img__logo-footer {
+        margin-bottom: $space-smedium;
+    }
+
+    /*tamaño de letras footer-map*/
+    .footer__section-lista {
+        font-size: $text-small;
+        padding: $space-smedium;
+
+        /*pading de li*/
+        li {
+            padding-bottom: $space-xsmall;
+        }
+
+        /*pading de h2 de li*/
+        h2 {
+            padding-bottom: $space-xsmall;
+        }
+    }
+
+    /*estilos form-boletin*/
+    .footer__section-boletin {
+        font-size: $text-small;
+    }
+
+    /*color, sepatracion letra map*/
+    .footer__spam-letra {
+        color: $col-alternate;
+        margin-left: $space-xsmall;
+        font-weight: 500;
+    }
+
+    /*hover enlances (letras)map*/
+    .footer__spam-letra:hover {
+        color: $col-primary;
+    }
+
+}
+
+/*seccion aside-copyrigt footer*/
+.footer__aside-copy {
+    background-color: $col-ultimate;
+    font-size: $text-xsmall;
+    text-align: end;
+    padding: $space-xsmall;
+}

@@ -1,0 +1,90 @@
+/*contenedor imagen 1 y h1 */
+.main__section1 {
+    background-image: url(/multimedia/main_section1.jpg);
+    background-size: cover;
+    background-position: center, center;
+    color: $col-secondary;
+    padding: 10rem 6rem 10rem 6rem;
+    display: flex;
+
+    /*estilos h1 h2 h3 icons */
+    .main__section1,
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 50%;
+        background-color: $col-form ;
+        padding: 4rem 2.5rem;
+        border-radius: 1%;
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: $text-slarge ;
+        font-weight: 900;
+        padding-bottom: 2rem;
+        text-shadow: 2px 2px 4px $col-tres;
+    }
+
+    h2 {
+        font-size: $text-large ;
+        font-weight: 900;
+    }
+
+    h3 {
+        font-size: $text-medium ;
+        font-weight: 900;
+    }
+
+    /*clase contenedor aside de iconos*/
+    .section__icon {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        left: $space-slarge;
+
+        /*div icon pc de boostrap*/
+        .icon__pc {
+            position: relative;
+            top: $space-xslarge;
+            right: $space-xxxlarge;
+
+            /*clase icon bootstrap pc*/
+            .icon__main {
+                font-size: $space-xxlarge;
+
+            }
+        }
+
+        /*div icon nube de fontawensome*/
+        .icon__nube {
+            position: relative;
+            bottom: $space-xlarge;
+            left: $space-slarge;
+
+            /*clase icon fontawensome nube*/
+            .fa-brands {
+                font-size: $space-superlarge;
+            }
+        }
+
+    }
+
+}
+
+/*clase franjas main*/
+.div__franjas {
+
+    div{
+        height: $space-xsmall;
+        background-color: $col-primary;
+        margin: $space-xxsmall 0 $space-xxsmall 0;
+    }
+
+    .div__franja-2{
+        height: .8rem;
+        margin:0.4rem 0 0.3rem 0;
+    }
+}

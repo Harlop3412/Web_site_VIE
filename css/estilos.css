@@ -4,6 +4,7 @@
 /*spacings*/
 /*font-sizes*/
 /************** base_reset.scss***********************************/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200&family=Open+Sans:ital@1&family=Rubik:ital,wght@1,300&display=swap");
 *::after,
 *::before,
 * {
@@ -23,7 +24,13 @@ html {
       list-style-type: none; }
 
 /********************utilidades_funciones***********************************/
+/*******  google_font********/
 /***************************** layout_header.scss*****************************/
+/*z-index mayor pasa por delante del logo footer*/
+.header {
+  position: relative;
+  z-index: 50; }
+
 /*estilos del flex */
 .header__section1 {
   display: flex;
@@ -32,7 +39,7 @@ html {
   align-items: flex-end;
   flex-wrap: wrap;
   padding: 0.5rem 2rem;
-  background-color: #042EBE;
+  background-color: #042ebe;
   /*clase para cambiar tamaños de iconoscolor redes fontawesome*/
   /*hover de redes header*/
   /*clase estilos icono correo header*/
@@ -44,12 +51,12 @@ html {
   .header__section1 .fa-brands, .header__section1 .icono__phone {
     font-weight: 500;
     font-size: 2.5em;
-    color: #000000; }
+    color: black; }
   .header__section1 .fa-brands:hover, .header__section1 .icono__phone:hover {
     color: white; }
   .header__section1 .fa-solid {
     font-size: 2.5em;
-    color: #000000; }
+    color: black; }
   .header__section1 .fa-solid:hover {
     color: white; }
 
@@ -62,28 +69,33 @@ html {
 /*--estilos del menu nav --*/
 .nav__color {
   background-color: white;
-  border-bottom: solid 2px #042EBE;
+  border-bottom: solid 2px #042ebe;
   /*dar estilos de texto borde y sobre escribir color letra de enlaces a del nav (clase está en todas las secciones del menu de navegacion)  */
   /*sobreescribir el color de la letra con hover del nav*/
+  /*clase active del menu*/
   /*cambiar estilos del incono del menu de nav (clase de libreria fontawensome)   linea 76 html*/
   /*sobreescribir clase de bootstrap para quitar borde del icono del menu que aparece por defecto   linea 73 html*/
   /*sobreescribir clase de bootstrap para quitar el borde que se produce al hacer clic (:focus) en el menu  linea 73 html*/
   /*sobreescribir el flex de la clase para dar espacio entre logo y menú menu   linea 78 html*/ }
   .nav__color .color__texto1 {
     text-align: center;
-    border: solid #042EBE 1px;
-    background-color: #042EBE;
+    border: solid #042ebe 1px;
+    background-color: #042ebe;
     border-radius: 5%;
     font-weight: bolder;
     font-size: 1.6em;
     margin: 0 0.5rem;
     color: white !important; }
   .nav__color .color__texto1:hover {
-    color: #000000 !important; }
+    color: black !important; }
+  .nav__color .active {
+    color: black !important;
+    border: 1 1px solid black;
+    border-radius: 5%; }
   .nav__color .fa-solid {
     font-weight: lighter;
     font-size: 4rem;
-    color: #000000; }
+    color: black; }
   .nav__color .navbar-toggler {
     border: none; }
   .nav__color .navbar-toggler:focus {
@@ -91,19 +103,91 @@ html {
   .nav__color .nav__flex {
     justify-content: space-around; }
 
+/********************************layout_main.scss*****************************/
+/*contenedor imagen 1 y h1 */
+.main__section1 {
+  background-image: url(/multimedia/main_section1.jpg);
+  background-size: cover;
+  background-position: center, center;
+  color: white;
+  padding: 10rem 6rem 10rem 6rem;
+  display: flex;
+  /*estilos h1 h2 h3 icons */
+  /*clase contenedor aside de iconos*/ }
+  .main__section1 .main__section1,
+  .main__section1 article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    background-color: rgba(4, 46, 190, 0.7);
+    padding: 4rem 2.5rem;
+    border-radius: 1%; }
+  .main__section1 h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.8em;
+    font-weight: 900;
+    padding-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+  .main__section1 h2 {
+    font-size: 3em;
+    font-weight: 900; }
+  .main__section1 h3 {
+    font-size: 2.5em;
+    font-weight: 900; }
+  .main__section1 .section__icon {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    left: 5rem;
+    /*div icon pc de boostrap*/
+    /*div icon nube de fontawensome*/ }
+    .main__section1 .section__icon .icon__pc {
+      position: relative;
+      top: 15rem;
+      right: 22rem;
+      /*clase icon bootstrap pc*/ }
+      .main__section1 .section__icon .icon__pc .icon__main {
+        font-size: 18rem; }
+    .main__section1 .section__icon .icon__nube {
+      position: relative;
+      bottom: 10rem;
+      left: 5rem;
+      /*clase icon fontawensome nube*/ }
+      .main__section1 .section__icon .icon__nube .fa-brands, .main__section1 .section__icon .icon__nube .header__section1 .icono__phone, .header__section1 .main__section1 .section__icon .icon__nube .icono__phone {
+        font-size: 32rem; }
+
+/*clase franjas main*/
+.div__franjas div {
+  height: 1rem;
+  background-color: #042ebe;
+  margin: 0.5rem 0 0.5rem 0; }
+
+.div__franjas .div__franja-2 {
+  height: .8rem;
+  margin: 0.4rem 0 0.3rem 0; }
+
 /******************************* layout_footer.scss****************************/
-/*estilos del contenedor padre del form1*/
+/*flex del form estilos img*/
 .footer__general1 {
   background-image: url(/multimedia/footer_section1.jpg);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
-  /*espaciado inferior del form*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*estilos del form */
   /*estilos generales del contenedor del form1*/
   /*estilos de campos form1 section1*/
   /*estilos legend del fieldset form1 section1*/ }
   .footer__general1 form {
-    padding: 0 1rem 2rem 1rem; }
+    padding: 0 1rem 2rem 1rem;
+    color: white;
+    background-color: rgba(4, 46, 190, 0.7);
+    width: 50rem;
+    margin: 2rem 0 2rem 0;
+    border-radius: 1%; }
   .footer__general1 .estilos__form1 {
     display: flex;
     flex-direction: column;
@@ -111,16 +195,19 @@ html {
     align-items: center;
     flex-wrap: none;
     margin-top: 2rem; }
-  .footer__general1 .imput__form1, .footer__general1 .legend__form1 legend {
+  .footer__general1 .imput__form1 {
     font-size: 1.9em;
     font-weight: 500; }
+  .footer__general1 .legend__form1 legend {
+    font-size: 2.5em;
+    font-weight: 900; }
 
 /*estilos de espaciado titulos form1 section 1*/
 .titulos__form1, .footer__phone-grid .footer__section1, .footer__phone-grid .footer__aside {
   padding-top: 2rem;
   /*estilos de tamaños p titulos form1 section 1*/ }
   .titulos__form1 p, .footer__phone-grid .footer__section1 p, .footer__phone-grid .footer__aside p {
-    font-size: 3.2em;
+    font-size: 3em;
     font-weight: bolder;
     text-align: center; }
 
@@ -130,13 +217,10 @@ html {
   grid-template-areas: 'footer__phone-grid-area1 footer__phone-grid-area2';
   /*estilos footer section telefonos*/
   /*estilos contenedor telefono-llamanos*/ }
-  .footer__phone-grid .footer__phone-grid-area1 {
-    grid-area: 'footer__phone-grid-area1'; }
-  .footer__phone-grid .footer__phone-grid-area2 {
-    grid-area: 'footer__phone-grid-area2'; }
   .footer__phone-grid .footer__section1, .footer__phone-grid .footer__aside {
     margin: 0;
-    background-color: #042EBE; }
+    background-color: #042ebe;
+    text-shadow: 1px 2px 2px black; }
   .footer__phone-grid .footer__aside {
     background-color: white;
     /* pading derecho icono telefono */ }
@@ -150,10 +234,11 @@ html {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  background-color: #E8EDED;
+  background-color: #e8eded;
   padding-top: 3rem;
   /*tamaño inconos redes footer*/
   /*color :hover inconos redes footer*/
+  /*contenedor logo footer z-index menor pasa por detras del header*/
   /*ancho imagen logo-footer*/
   /*tamaño de letras footer-map*/
   /*estilos form-boletin*/
@@ -162,9 +247,12 @@ html {
   .footer__section-map .footer__section-redes a {
     text-align: center; }
   .footer__section-map .footer__section-redes i {
-    font-size: 3.2em; }
+    font-size: 3em; }
   .footer__section-map .footer__section-redes i:hover {
-    color: #042EBE; }
+    color: #042ebe; }
+  .footer__section-map .logo__footer {
+    position: relative;
+    z-index: 10; }
   .footer__section-map .img__logo-footer {
     margin-bottom: 3rem; }
   .footer__section-map .footer__section-lista {
@@ -179,26 +267,280 @@ html {
   .footer__section-map .footer__section-boletin {
     font-size: 1.6em; }
   .footer__section-map .footer__spam-letra {
-    color: #000000;
+    color: black;
     margin-left: 1rem;
     font-weight: 500; }
   .footer__section-map .footer__spam-letra:hover {
-    color: #042EBE; }
+    color: #042ebe; }
 
 /*seccion aside-copyrigt footer*/
 .footer__aside-copy {
-  background-color: #E8EDED;
+  background-color: #e8eded;
   font-size: 1.2em;
   text-align: end;
   padding: 1rem; }
 
+/*estilos del contenedor padre del form1*/
 /***************************componentes_botones.scss*************************/
 /*boton form1 section1*/
 .btn__form1 {
   font-size: 1.9em;
   font-weight: lighter;
   color: white;
-  background-color: #042EBE; }
+  background-color: #042ebe; }
+
+/*vistas*/
+/*contenedor quienes somos inicio*/
+.section__inicio {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(white, #9696ff, rgba(4, 46, 190, 0.6));
+  /*contenedor 1 general titulo*/
+  /*contenedor inicio-historia article SIN scroll inicio-quienes*/
+  /*p de article con esta clase, no indentar*/
+  /*contenedor article con scroll inicio-historia*/
+  /*p de article con esta clase, no indentar*/
+  /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+  /*spam quienes somos inicio*/
+  /*div link inicio*/ }
+  .section__inicio .section__inicio-1 {
+    display: flex;
+    width: 80%;
+    /*elementos contenedor section__inicio-1 */ }
+    .section__inicio .section__inicio-1 .section__inicio-1,
+    .section__inicio .section__inicio-1 h2 {
+      font-family: 'Open Sans', sans-serif;
+      color: black;
+      font-size: 1.9em;
+      font-weight: 900;
+      padding: 4rem 6rem 2rem 6rem;
+      text-align: center; }
+  .section__inicio .section__inicio-3 {
+    height: 16rem;
+    overflow-y: hidden; }
+  .section__inicio .section__inicio-3,
+  .section__inicio p {
+    font-size: 2rem;
+    padding: 0 6rem 0 10rem;
+    color: black;
+    font-weight: 600;
+    text-align: justify; }
+  .section__inicio .section__inicio-2 {
+    height: 16rem;
+    overflow-y: scroll; }
+  .section__inicio .section__inicio-2,
+  .section__inicio p {
+    font-size: 2rem;
+    padding: 0 6rem 0 10rem;
+    color: black;
+    font-weight: 600;
+    text-align: justify; }
+  .section__inicio .section__inicio-2::-webkit-scrollbar {
+    width: 1rem;
+    /* Ancho de la barra de desplazamiento */ }
+  .section__inicio .section__inicio-2::-webkit-scrollbar-thumb {
+    background-color: black;
+    /* Color del botón de desplazamiento */
+    border-radius: 0.5rem;
+    /* Borde redondeado del botón de desplazamiento */ }
+  .section__inicio .section__inicio-2::-webkit-scrollbar-thumb:hover {
+    background-color: #042ebe;
+    /* Cambio de color al pasar el mouse por encima */ }
+  .section__inicio .resaltado {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+  .section__inicio .inicio__link,
+  .section__inicio a {
+    text-align: end;
+    font-size: 2rem;
+    color: black;
+    padding: 2rem 18rem 2rem 0;
+    font-family: 'Open Sans', sans-serif; }
+  .section__inicio a:hover {
+    color: #042ebe; }
+
+/*contenedor general seccion inicio servicios */
+.inicio__servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(4, 46, 190, 0.7), rgba(255, 255, 255, 0.7));
+  padding: 10rem 6rem;
+  color: black;
+  /* Clases para los iconos utilizando la propiedad 'content' icono esta en cada elemento*/
+  /*estilos delos div de  iconos*/ }
+  .inicio__servicios .section__iconos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 5rem;
+    row-gap: 3rem;
+    /*clase en cada enlace div estilos del icono*/
+    /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos a las clases fa que son de fontawensome, cada icono tomara estos estilos*/
+    /*nota: metodo para usar el content con los iconos, no se necesita porque la clase da icono en html
+        .icono.fa-briefcase::before {
+            content: "\f0ec";
+        }
+
+        .icono.fa-users::before {
+            content: "\f0c0";
+        }
+
+        .icono.fa-file::before {
+            content: "\f15b";
+        }
+
+        .icono.fa-laptop::before {
+            content: "\f109";
+        }
+
+        .icono.fa-calculator::before {
+            content: "\f1ec";
+        }
+
+        .icono.fa-cogs::before {
+            content: "\f085";
+        } */ }
+    .inicio__servicios .section__iconos .icono {
+      font-size: 2rem;
+      color: black; }
+    .inicio__servicios .section__iconos .icono:hover {
+      color: #042ebe; }
+    .inicio__servicios .section__iconos .icono::before {
+      font-size: 2.4rem;
+      margin-right: 1rem;
+      font-family: FontAwesome; }
+  .inicio__servicios .inicio__servicios,
+  .inicio__servicios div {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif; }
+
+/*clase contenedor titulo h2 inicio__servicios*/
+.servicios__inicio {
+  color: black;
+  margin-bottom: 3rem; }
+  .servicios__inicio h2 {
+    font-size: 3.8em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900; }
+
+/*se le debe dar un valor a la clase para usar la pseudoclase hover*/
+.servicios__inicio:hover {
+  color: #042ebe; }
+
+/*seccion clientes-inicio*/
+/*contenedor general titulo h2 y galeria*/
+.section__clientes {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(white, #9696ff, rgba(4, 46, 190, 0.6));
+  /*contenedor titulo h2 a */
+  /*contenedor divs galeria */
+  /*seccion inicio-modal */
+  /* Oculta la modal por defecto era opcion para css */
+  /* Estilos para el contenido de la modal que se posicione en el centro */
+  /* Estilos para el enlace de cierre */
+  /* Estilos para la imagen en la modal */ }
+  .section__clientes .section__clientes-title {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 4rem 6rem 4rem 6rem;
+    /*estos estilos deben darse  al h2 directamente*/
+    /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/
+    /*hover enlace titulo inicio-clientes*/ }
+    .section__clientes .section__clientes-title a {
+      color: black;
+      font-size: 1.9em;
+      font-weight: 900; }
+    .section__clientes .section__clientes-title a:hover {
+      color: #042ebe; }
+  .section__clientes .section__clientes-galery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 5rem;
+    margin: 2rem 18rem 4rem 18rem;
+    /*clase encada div galeria */
+    /* Agrega un aumento de escala a las imágenes en hover */
+    /* Agrega un aumento de escala a las imágenes en clic */
+    /*h5 de cada div galeria */ }
+    .section__clientes .section__clientes-galery .inicio__galery {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 140px;
+      height: 90px;
+      background-color: white;
+      border-radius: 1rem;
+      /*img de cada div galeria */
+      /*clase a algunas img que modifica altura*/
+      /*clase pading img grinsa*/ }
+      .section__clientes .section__clientes-galery .inicio__galery img {
+        border-radius: 1rem; }
+      .section__clientes .section__clientes-galery .inicio__galery .inicio__galery-img {
+        height: 100%; }
+      .section__clientes .section__clientes-galery .inicio__galery .inicio__galery-img1 {
+        padding: 0 1rem 0 1rem; }
+    .section__clientes .section__clientes-galery .inicio__galery:hover {
+      transform: scale(2);
+      /* Escala al 120% en hover */
+      transition: transform 0.3s ease;
+      /* Agrega una transición suave */ }
+    .section__clientes .section__clientes-galery .inicio__galery img:active {
+      transform: scale(1.2);
+      /* Escala al 120% en clic */
+      transition: transform 0.3s ease;
+      /* Agrega una transición rápida */ }
+    .section__clientes .section__clientes-galery .inicio__galery-h5 {
+      text-align: center;
+      margin-top: 1rem;
+      color: black;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+  .section__clientes .modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    padding: 0 10rem 0 10rem; }
+  .section__clientes .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1rem;
+    width: 70rem; }
+  .section__clientes .cerrar .fa-rectangle-xmark {
+    color: #9696ff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 5rem;
+    text-decoration: none;
+    z-index: 10;
+    cursor: pointer; }
+  .section__clientes .cerrar .fa-rectangle-xmark:hover {
+    color: rgba(4, 46, 190, 0.6); }
+  .section__clientes .modal-content img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 4rem 2rem; }
 
 /*************************utilidades_mediaquieries***************************/
 @media screen and (min-width: 1px) and (max-width: 540px) {
@@ -209,22 +551,27 @@ html {
   /*header dejar navbar-hamburguesa fijo 540*/
   .navbar {
     position: fixed;
-    z-index: 2;
     background-color: transparent;
     /*ancho de logo en menu ham 540*/ }
     .navbar .header__navbar-logo {
-      width: 35%; }
+      width: 120px; }
   /************footer****************/
   .footer__general1 {
     padding-top: 3rem; }
+  /*zise letra ancho form 540px*/
+  .footer__general1 form {
+    width: 60%;
+    font-size: .5rem; }
   /*footer sacar el grid de llamanos 540*/
   .footer__phone-grid {
     display: none; }
-  /*ancho y posicion logo footer 540*/
-  .img__logo-footer {
-    width: 70%;
+  /*posicion logo footer 540*/
+  .logo__footer {
     position: relative;
-    left: 15%; } }
+    left: 15%;
+    /*ancho logo*/ }
+    .logo__footer .img__logo-footer {
+      width: 150px; } }
 
 @media screen and (min-width: 541px) and (max-width: 720px) {
   /************header****************/
@@ -235,15 +582,25 @@ html {
   /*header dejar navbar-hamburguesa fijo 720*/
   .navbar {
     position: fixed;
-    z-index: 1;
     background-color: transparent;
     /*ancho de logo en menu ham 720*/ }
     .navbar .header__navbar-logo {
-      width: 35%; }
+      width: 120px; }
   /************footer****************/
+  /*zise letra ancho form 720px*/
+  .footer__general1 form {
+    width: 60%;
+    font-size: .7rem; }
   /*footer sacar el grid de llamanos 720*/
   .footer__phone-grid {
-    display: none; } }
+    display: none; }
+  /*posicion logo footer 720*/
+  .logo__footer {
+    position: relative;
+    left: 15%;
+    /*ancho logo*/ }
+    .logo__footer .img__logo-footer {
+      width: 160px; } }
 
 @media screen and (min-width: 721px) and (max-width: 991px) {
   /************header****************/
@@ -254,20 +611,35 @@ html {
   /*header dejar navbar-hamburguesa fijo 991*/
   .navbar {
     position: fixed;
-    z-index: 1;
     background-color: transparent;
     /*ancho de logo en menu ham 991*/ }
     .navbar .header__navbar-logo {
-      width: 35%; }
-  /************footer****************/ }
+      width: 140px; }
+  /************footer****************/
+  /*posicion logo footer 991*/
+  .logo__footer {
+    position: relative;
+    left: 15%;
+    /*ancho logo*/ }
+    .logo__footer .img__logo-footer {
+      width: 160px; } }
 
 @media screen and (min-width: 992px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
   .header {
     position: sticky;
-    top: 0%; }
+    top: 0%;
+    /*ancho de logo en menu ham 991*/ }
+    .header .header__navbar-logo {
+      width: 120px; }
   /************footer****************/
   /*footer para que los elementos del mapa corten en <= 992px*/
   .footer__section-map {
-    flex-wrap: nowrap; } }
+    flex-wrap: nowrap; }
+  .logo__footer {
+    position: relative;
+    left: 15%;
+    /*ancho logo*/ }
+    .logo__footer .img__logo-footer {
+      width: 180px; } }

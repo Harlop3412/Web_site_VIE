@@ -1,0 +1,167 @@
+@media screen and (min-width: 1px) and (max-width: 540px) {
+
+    /************header****************/
+
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    /*header dejar navbar-hamburguesa fijo 540*/
+    .navbar {
+        position: fixed;
+        background-color: transparent;
+
+        /*ancho de logo en menu ham 540*/
+        .header__navbar-logo {
+            width: 120px;
+        }
+    }
+
+    /************footer****************/
+
+    .footer__general1 {
+        padding-top: 3rem;
+    }
+
+    /*zise letra ancho form 540px*/
+    .footer__general1 form {
+        width: 60%;
+        font-size: .5rem;
+    }
+
+    /*footer sacar el grid de llamanos 540*/
+    .footer__phone-grid {
+        display: none;
+    }
+
+    /*posicion logo footer 540*/
+    .logo__footer {
+        position: relative;
+        left: 15%;
+
+
+        /*ancho logo*/
+        .img__logo-footer {
+            width: 150px;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 541px) and (max-width: 720px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador despues de 720*/
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    /*header dejar navbar-hamburguesa fijo 720*/
+    .navbar {
+        position: fixed;
+        background-color: transparent;
+
+        /*ancho de logo en menu ham 720*/
+        .header__navbar-logo {
+            width: 120px;
+        }
+    }
+
+    /************footer****************/
+    /*zise letra ancho form 720px*/
+    .footer__general1 form {
+        width: 60%;
+        font-size: .7rem;
+    }
+
+    /*footer sacar el grid de llamanos 720*/
+    .footer__phone-grid {
+        display: none;
+    }
+
+    /*posicion logo footer 720*/
+    .logo__footer {
+        position: relative;
+        left: 15%;
+
+
+        /*ancho logo*/
+        .img__logo-footer {
+            width: 160px;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 991px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador hasta 992*/
+    .header {
+        position: sticky;
+        top: 0%;
+    }
+
+    /*header dejar navbar-hamburguesa fijo 991*/
+    .navbar {
+        position: fixed;
+        background-color: transparent;
+
+        /*ancho de logo en menu ham 991*/
+        .header__navbar-logo {
+            width: 140px;
+        }
+    }
+
+    /************footer****************/
+    /*posicion logo footer 991*/
+    .logo__footer {
+        position: relative;
+        left: 15%;
+
+
+        /*ancho logo*/
+        .img__logo-footer {
+            width: 160px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
+    .header {
+        position: sticky;
+        top: 0%;
+
+        /*ancho de logo en menu ham 991*/
+        .header__navbar-logo {
+            width: 120px;
+        }
+    }
+
+    /************footer****************/
+    /*footer para que los elementos del mapa corten en <= 992px*/
+    .footer__section-map {
+        flex-wrap: nowrap;
+    }
+
+    //  /*posicion logo footer > 991*/
+    .logo__footer {
+        position: relative;
+        left: 15%;
+
+        /*ancho logo*/
+        .img__logo-footer {
+            width: 180px;
+        }
+
+    }
+
+}

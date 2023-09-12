@@ -1,0 +1,103 @@
+/*z-index mayor pasa por delante del logo footer*/
+.header{
+    position: relative;
+    z-index: 50;
+    // display: none;
+}
+/*estilos del flex */
+.header__section1 {
+    @include flex1(row, space-around, flex-end, wrap);
+    padding: $space-xxsmall $space-small;
+    background-color: $col-primary;
+
+    .icono__phone {
+        /*estilos icono phone galeria bootstrap*/
+        @extend .fa-brands;
+        /*extend de class .fa-brands layout_header*/
+        padding-right: $space-ssmall;
+    }
+
+    /*clase para cambiar tamaños de iconoscolor redes fontawesome*/
+    .fa-brands {
+        font-weight: 500;
+        font-size: $text-medium;
+        color: $col-alternate;
+    }
+
+    /*hover de redes header*/
+    .fa-brands:hover {
+        color: $col-secondary;
+    }
+
+    /*clase estilos icono correo header*/
+    .fa-solid {
+        font-size: $text-medium;
+        color: $col-alternate;
+    }
+
+    /*hover de icono correo header*/
+    .fa-solid:hover {
+        color: $col-secondary;
+    }
+
+}
+
+/*estilos letra slogan*/
+.header__section1 p {
+    color: $col-secondary;
+    font-weight: bolder;
+    font-size: $text-small;
+
+}
+
+/*--estilos del menu nav --*/
+.nav__color {
+    background-color: $col-secondary;
+    border-bottom: solid $space-border-bottom $col-primary;
+
+    /*dar estilos de texto borde y sobre escribir color letra de enlaces a del nav (clase está en todas las secciones del menu de navegacion)  */
+    .color__texto1 {
+        text-align: center;
+        border: solid $col-primary $space-shadow;
+        background-color: $col-primary;
+        border-radius: 5%;
+        font-weight: bolder;
+        font-size: $text-small;
+        margin: 0 $space-xxsmall ;
+        color: $col-secondary !important;
+    }
+
+    /*sobreescribir el color de la letra con hover del nav*/
+    .color__texto1:hover {
+        color: $col-alternate !important;
+    }
+   
+    /*clase active del menu*/
+    .active{
+        color:$col-alternate!important ;
+        border: 1$space-shadow solid $col-alternate;
+        border-radius: 5%;
+    }
+
+    /*cambiar estilos del incono del menu de nav (clase de libreria fontawensome)   linea 76 html*/
+    .fa-solid {
+        font-weight: lighter;
+        font-size: $space-medium;
+        color: $col-alternate;
+    }
+
+    /*sobreescribir clase de bootstrap para quitar borde del icono del menu que aparece por defecto   linea 73 html*/
+    .navbar-toggler {
+        border: none;
+    }
+
+    /*sobreescribir clase de bootstrap para quitar el borde que se produce al hacer clic (:focus) en el menu  linea 73 html*/
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /*sobreescribir el flex de la clase para dar espacio entre logo y menú menu   linea 78 html*/
+    .nav__flex {
+        justify-content: space-around;
+    }
+}

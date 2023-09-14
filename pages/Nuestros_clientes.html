@@ -26,7 +26,7 @@
     <script src="https://kit.fontawesome.com/91007ea3a2.js" crossorigin="anonymous"></script>
     <!--estilos.css-->
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Servicios Prestados</title>
+    <title>Nuestros Clientes</title>
 </head>
 
 <body>
@@ -91,16 +91,18 @@
                                     Somos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  color__texto1" href="../pages/Nuestros_clientes.html">Nuestro Clientes</a>
+                                <a class="nav-link active color__texto1" href="../pages/Nuestros_clientes.html">Nuestro
+                                    Clientes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  color__texto1" href="../pages/documentos_electronicos.html">Documentos Electrónicos</a>
+                                <a class="nav-link  color__texto1"
+                                    href="../pages/documentos_electronicos.html">Documentos Electrónicos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link  color__texto1" href="../pages/contacto.html">Contáctenos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active color__texto1" href="../pages/nuestros_servicios.html">Servicios
+                                <a class="nav-link  color__texto1" href="../pages/nuestros_servicios.html">Servicios
                                     Prestados</a>
                             </li>
                         </ul>
@@ -111,48 +113,109 @@
     </header>
 
     <main>
-
         <!--section divs franjas -->
         <section class="div__franjas">
             <div class="div__franja-1"></div>
             <div class="div__franja-2"></div>
         </section>
-
-        <!--seccion de inicio-servicios-->
-        <section class="inicio__servicios">
-            <a href="" class="servicios__inicio">
-                <div>
-                    <h2>Nuestros Servicios</h2>
-                </div>
-            </a>
-            <section class="section__iconos">
-                <!--libreria fontawnsome-->
-                <a href="">
-                    <div class="icono fa fa-briefcase">Asesoría en Gestión Empresarial</div>
+        <!--seccion inicio-clientes-->
+        <section class="section__clientes">
+            <div class="section__clientes-title">
+                <h2 class="">
+                    <a href="">
+                        Clientes y Aliados Estratégicos
+                    </a>
+                </h2>
+            </div>
+            <section class="section__clientes-galery">
+                <a href="#imagenModal">
+                    <div class="inicio__galery">
+                        <img src="../multimedia/galeria_inicio/logo_grinsa.png" class="inicio__galery-img1"
+                            alt="logo-grinsa">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Grinsa Ingeniería SAS</h5>
+                    </div>
                 </a>
-                <a href="">
-                    <div class="icono fa fa-users">Apoyo en Gestión de Talento Humano</div>
+                <a href="#imagenModal">
+                    <div class="inicio__galery">
+                        <img src="../multimedia/galeria_inicio/logo_vapor.png" alt="logo-vapor">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Vapor y Mantenimiento SAS</h5>
+                    </div>
                 </a>
-                <a href="">
-                    <div class="icono fa fa-book">Apoyo en Gestión Tributaria</div>
+                <a href="#imagenModal">
+                    <div class="inicio__galery">
+                        <img src="../multimedia/galeria_inicio/logo_corponova.jpg" alt="logo-corponova">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Corponova Stetic Spa SAS</h5>
+                    </div>
                 </a>
-                <a href="">
-                    <div class="icono fa fa-laptop">Asesoría en Ecosistema Electrónico</div>
+                <a href="#imagenModal">
+                    <div class="inicio__galery">
+                        <img src="../multimedia/galeria_inicio/logo_ingnovation.png" alt="logo-ingnovation">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Ingnovation</h5>
+                    </div>
                 </a>
-                <a href="">
-                    <div class="icono fa fa-calculator">Apoyo en Gestión Contable</div>
+                <a href="#imagenModal">
+                    <div class="inicio__galery"><img src="../multimedia/galeria_inicio/logo_fitlab.jpg"
+                            alt="logo-fitlab">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Fit Lab</h5>
+                    </div>
                 </a>
-                <a href="">
-                    <div class="icono fa fa-cogs">Apoyo en Procedimiento Organizacional</div>
+                <a href="#imagenModal">
+                    <div class="inicio__galery"><img src="../multimedia/galeria_inicio/logo_contenidos.png"
+                            class="inicio__galery-img" alt="logo-contenidos-educativos">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Contenidos Educativos</h5>
+                    </div>
+                </a>
+                <a href="#imagenModal">
+                    <div class="inicio__galery"><img src="../multimedia/galeria_inicio/logo_public_strategies.jpg"
+                            alt="logo-public-strategies">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Public Estrategies</h5>
+                    </div>
+                </a>
+                <a href="#imagenModal">
+                    <div class="inicio__galery">
+                        <img src="../multimedia/galeria_inicio/logo_facturatech.png" class="inicio__galery-img"
+                            alt="logo-facturatech">
+                    </div>
+                    <div class="inicio__galery-h5">
+                        <h5>Facturatech</h5>
+                    </div>
                 </a>
             </section>
+            <!-- section inicio-modal CON enlace para cerrar la modal con CSS-->
+            <!-- <div class="modal" id="imagenModal">
+                <div class="modal-content">
+                    <a href="#cerrar" class="cerrar">X</a>
+                    <img src="" alt="Imagen Ampliada">
+                </div>
+            </div>  -->
+            <!-- section inicio-modal sin enlace-->
+            <div class="modal" id="imagenModal">
+                <div class="modal-content ">
+                    <img src="" alt="Imagen Ampliada" class="">
+                </div>
+                <div id="cerrar" class="cerrar "><i class="fa-solid fa-rectangle-xmark"></i></div>
+            </div>
+
         </section>
         <!--section divs franjas -->
         <section class="div__franjas">
             <div class="div__franja-1"></div>
             <div class="div__franja-2"></div>
         </section>
-
     </main>
 
     <footer>
@@ -341,9 +404,11 @@
                     <li><a href="../pages/quienes_somos.html"><i class="fa-solid fa-id-card"></i><span
                                 class="footer__spam-letra"> Quienes
                                 Somos</span></a></li>
-                    <li><a href="../pages/Nuestros_clientes.html"><i class="fa-solid fa-user-group"></i><span class="footer__spam-letra"> Nuestros
+                    <li><a href="../pages/Nuestros_clientes.html"><i class="fa-solid fa-user-group"></i><span
+                                class="footer__spam-letra"> Nuestros
                                 Clientes</span></a></li>
-                    <li><a href="../pages/documentos_electronicos.html"><i class="fa-solid fa-laptop-file"></i><span class="footer__spam-letra"> Documentos
+                    <li><a href="../pages/documentos_electronicos.html"><i class="fa-solid fa-laptop-file"></i><span
+                                class="footer__spam-letra"> Documentos
                                 Electrónicos</span></a></li>
                     <li><a href="../pages/contacto.html"><i class="fa-solid fa-mobile-screen"></i> <span
                                 class="footer__spam-letra">Contáctenos</span></a></li>
@@ -392,6 +457,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

@@ -112,29 +112,27 @@ html {
   color: white;
   padding: 10rem 6rem 10rem 6rem;
   display: flex;
-  /*estilos h1 h2 h3 icons */
+  /*estilos article h1 h2 h3 icons */
   /*clase contenedor aside de iconos*/ }
-  .main__section1 .main__section1,
   .main__section1 article {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 50%;
     background-color: rgba(4, 46, 190, 0.7);
     padding: 4rem 2.5rem;
     border-radius: 1%; }
-  .main__section1 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 3.8em;
-    font-weight: 900;
-    padding-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
-  .main__section1 h2 {
-    font-size: 3em;
-    font-weight: 900; }
-  .main__section1 h3 {
-    font-size: 2.5em;
-    font-weight: 900; }
+    .main__section1 article h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 3.8em;
+      font-weight: 900;
+      padding-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+    .main__section1 article h2 {
+      font-size: 3em;
+      font-weight: 900; }
+    .main__section1 article h3 {
+      font-size: 2.5em;
+      font-weight: 900; }
   .main__section1 .section__icon {
     display: flex;
     flex-direction: row-reverse;
@@ -296,47 +294,44 @@ html {
   flex-direction: column;
   background: linear-gradient(white, #9696ff, rgba(4, 46, 190, 0.6));
   /*contenedor 1 general titulo*/
-  /*contenedor inicio-historia article SIN scroll inicio-quienes*/
-  /*p de article con esta clase, no indentar*/
+  /*contenedor inicio-historia article scroll inicio-quienes*/
   /*contenedor article con scroll inicio-historia*/
-  /*p de article con esta clase, no indentar*/
   /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
   /*spam quienes somos inicio*/
   /*div link inicio*/ }
   .section__inicio .section__inicio-1 {
     display: flex;
     width: 80%;
-    /*elementos contenedor section__inicio-1 */ }
-    .section__inicio .section__inicio-1 .section__inicio-1,
+    /*titulo h2 quienes somos inicio*/ }
     .section__inicio .section__inicio-1 h2 {
       font-family: 'Open Sans', sans-serif;
       color: black;
-      font-size: 1.9em;
+      font-size: 3em;
       font-weight: 900;
       padding: 4rem 6rem 2rem 6rem;
       text-align: center; }
   .section__inicio .section__inicio-3 {
     height: 16rem;
-    overflow-y: hidden; }
-  .section__inicio .section__inicio-3,
-  .section__inicio p {
-    font-size: 2rem;
-    padding: 0 6rem 0 10rem;
-    color: black;
-    font-weight: 600;
-    text-align: justify; }
+    overflow-y: hidden;
+    /*p de article con esta clase, no indentar*/ }
+    .section__inicio .section__inicio-3 p {
+      font-size: 2rem;
+      padding: 0 18rem 0 22rem;
+      color: black;
+      font-weight: 600;
+      text-align: justify; }
   .section__inicio .section__inicio-2 {
     height: 16rem;
-    overflow-y: scroll; }
-  .section__inicio .section__inicio-2,
-  .section__inicio p {
-    font-size: 2rem;
-    padding: 0 6rem 0 10rem;
-    color: black;
-    font-weight: 600;
-    text-align: justify; }
+    overflow-y: scroll;
+    /*p de article con esta clase, no indentar*/ }
+    .section__inicio .section__inicio-2 p {
+      font-size: 2rem;
+      padding: 0 18rem 0 22rem;
+      color: black;
+      font-weight: 600;
+      text-align: justify; }
   .section__inicio .section__inicio-2::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.5rem;
     /* Ancho de la barra de desplazamiento */ }
   .section__inicio .section__inicio-2::-webkit-scrollbar-thumb {
     background-color: black;
@@ -351,15 +346,15 @@ html {
     color: black;
     font-weight: 900;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
-  .section__inicio .inicio__link,
-  .section__inicio a {
+  .section__inicio .inicio__link {
     text-align: end;
-    font-size: 2rem;
-    color: black;
     padding: 2rem 18rem 2rem 0;
-    font-family: 'Open Sans', sans-serif; }
-  .section__inicio a:hover {
-    color: #042ebe; }
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem; }
+    .section__inicio .inicio__link a {
+      color: black; }
+    .section__inicio .inicio__link a:hover {
+      color: #042ebe; }
 
 /*contenedor general seccion inicio servicios */
 .inicio__servicios {
@@ -372,15 +367,17 @@ html {
   padding: 10rem 6rem;
   color: black;
   /* Clases para los iconos utilizando la propiedad 'content' icono esta en cada elemento*/
-  /*estilos delos div de  iconos*/ }
+  /*estilos delos div de  iconos*/
+  /*clase contenedor titulo h2 inicio__servicios*/
+  /*se le debe dar un valor a la clase para usar la pseudoclase hover*/ }
   .inicio__servicios .section__iconos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     column-gap: 5rem;
     row-gap: 3rem;
-    /*clase en cada enlace div estilos del icono*/
-    /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos a las clases fa que son de fontawensome, cada icono tomara estos estilos*/
+    /*clase en cada enlace div da estilos a la fuente*/
+    /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
     /*nota: metodo para usar el content con los iconos, no se necesita porque la clase da icono en html
         .icono.fa-briefcase::before {
             content: "\f0ec";
@@ -414,28 +411,23 @@ html {
       font-size: 2.4rem;
       margin-right: 1rem;
       font-family: FontAwesome; }
-  .inicio__servicios .inicio__servicios,
   .inicio__servicios div {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem;
     margin: 1rem;
     border-radius: 0.5rem;
     font-family: 'Roboto', sans-serif; }
+  .inicio__servicios .servicios__inicio {
+    color: black;
+    margin-bottom: 3rem; }
+    .inicio__servicios .servicios__inicio h2 {
+      font-size: 3.8em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 900; }
+  .inicio__servicios .servicios__inicio:hover {
+    color: #042ebe; }
 
-/*clase contenedor titulo h2 inicio__servicios*/
-.servicios__inicio {
-  color: black;
-  margin-bottom: 3rem; }
-  .servicios__inicio h2 {
-    font-size: 3.8em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 900; }
-
-/*se le debe dar un valor a la clase para usar la pseudoclase hover*/
-.servicios__inicio:hover {
-  color: #042ebe; }
-
-/*seccion clientes-inicio*/
+/****************seccion clientes-inicio*******/
 /*contenedor general titulo h2 y galeria*/
 .section__clientes {
   display: flex;
@@ -443,11 +435,8 @@ html {
   background: linear-gradient(white, #9696ff, rgba(4, 46, 190, 0.6));
   /*contenedor titulo h2 a */
   /*contenedor divs galeria */
-  /*seccion inicio-modal */
-  /* Oculta la modal por defecto era opcion para css */
-  /* Estilos para el contenido de la modal que se posicione en el centro */
-  /* Estilos para el enlace de cierre */
-  /* Estilos para la imagen en la modal */ }
+  /***seccion inicio-modal ***/
+  /* contenedor general modal*/ }
   .section__clientes .section__clientes-title {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -509,41 +498,38 @@ html {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
   .section__clientes .modal {
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-    padding: 0 10rem 0 10rem; }
-  .section__clientes .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 1rem;
-    width: 70rem; }
-  .section__clientes .cerrar .fa-rectangle-xmark {
-    color: #9696ff;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 5rem;
-    text-decoration: none;
-    z-index: 10;
-    cursor: pointer; }
-  .section__clientes .cerrar .fa-rectangle-xmark:hover {
-    color: rgba(4, 46, 190, 0.6); }
-  .section__clientes .modal-content img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 4rem 2rem; }
+    z-index: 20;
+    /* Estilos para el contenido de la modal que se posicione en el centro */
+    /* Estilos para el enlace de cierre */
+    /* Estilos para la imagen cuando se despliega la modal  */ }
+    .section__clientes .modal .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 1rem;
+      width: 70rem; }
+    .section__clientes .modal .cerrar .fa-rectangle-xmark {
+      color: #9696ff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 5rem;
+      text-decoration: none;
+      z-index: 20;
+      cursor: pointer; }
+    .section__clientes .modal .cerrar .fa-rectangle-xmark:hover {
+      color: rgba(4, 46, 190, 0.6); }
+    .section__clientes .modal .modal-content img {
+      max-width: 100%;
+      padding: 4rem 2rem; }
 
 /*************************utilidades_mediaquieries***************************/
-@media screen and (min-width: 1px) and (max-width: 540px) {
+@media screen and (min-width: 1px) and (max-width: 400px) {
   /************header****************/
   .header {
     position: sticky;
@@ -555,13 +541,134 @@ html {
     /*ancho de logo en menu ham 540*/ }
     .navbar .header__navbar-logo {
       width: 120px; }
+  /************main*****************/
+  /*estilos h1 h2 h3 icons section inicio h1 pc nube article viene de main*/
+  /*contenedor imagen 1 y h1 */
+  .main__section1 {
+    flex-direction: column;
+    padding: 10rem 2rem 2rem 2rem;
+    /*estilos article h1 h2 h3 icons */
+    /*clase contenedor aside de iconos*/ }
+    .main__section1 article {
+      padding: 3rem 1rem;
+      border-radius: 1%; }
+      .main__section1 article h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 1rem 0 0 0; }
+      .main__section1 article h2 {
+        font-size: 2.2rem; }
+      .main__section1 article h3 {
+        font-size: 1.8rem; }
+    .main__section1 .section__icon {
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      left: 0;
+      /*div icon pc de boostrap*/
+      /*div icon nube de fontawensome*/ }
+      .main__section1 .section__icon .icon__pc {
+        position: relative;
+        top: -5rem;
+        right: 0;
+        /*clase icon bootstrap pc*/ }
+        .main__section1 .section__icon .icon__pc .icon__main {
+          font-size: 14rem; }
+      .main__section1 .section__icon .icon__nube {
+        position: relative;
+        bottom: 2rem;
+        left: 1.5rem;
+        /*clase icon fontawensome nube*/ }
+        .main__section1 .section__icon .icon__nube .fa-brands, .main__section1 .section__icon .icon__nube .header__section1 .icono__phone, .header__section1 .main__section1 .section__icon .icon__nube .icono__phone {
+          font-size: 22rem; }
+  /********seccion quienes somos inicio*/
+  /*contenedor 1 general titulo*/
+  .section__inicio {
+    /*contenedor inicio-historia article scroll inicio-quienes*/
+    /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+    /*contenedor article con scroll inicio-historia*/ }
+    .section__inicio .section__inicio-1 {
+      width: 100%;
+      justify-content: center;
+      /*titulo h2 quienes somos inicio*/ }
+      .section__inicio .section__inicio-1 h2 {
+        padding: 4rem 6rem 2rem 6rem;
+        text-align: center;
+        font-size: 2.5em; }
+    .section__inicio .section__inicio-3 {
+      height: 16rem;
+      overflow-y: scroll;
+      /*p de article con esta clase*/ }
+      .section__inicio .section__inicio-3 p {
+        font-size: 1.5rem;
+        padding: 0 3rem 0 2rem; }
+    .section__inicio .section__inicio-3::-webkit-scrollbar {
+      width: 0.5rem;
+      /* Ancho de la barra de desplazamiento */ }
+    .section__inicio .section__inicio-3::-webkit-scrollbar-thumb {
+      background-color: black;
+      /* Color del botón de desplazamiento */
+      border-radius: 0.5rem;
+      /* Borde redondeado del botón de desplazamiento */ }
+    .section__inicio .section__inicio-3::-webkit-scrollbar-thumb:hover {
+      background-color: #042ebe;
+      /* Cambio de color al pasar el mouse por encima */ }
+    .section__inicio .section__inicio-2 {
+      /*p de article con esta clase, no indentar*/ }
+      .section__inicio .section__inicio-2 p {
+        font-size: 1.5rem;
+        padding: 0 3rem 0 2rem; }
+  /*contenedor general seccion inicio servicios */
+  .inicio__servicios {
+    padding: 6rem 6rem;
+    /* Clases para los iconos icono esta en cada elemento*/
+    /*estilos delos div de  iconos*/
+    /*clase contenedor titulo h2 inicio__servicios*/ }
+    .inicio__servicios .section__iconos {
+      column-gap: 2rem;
+      row-gap: 2rem;
+      /*clase en cada enlace div da estilos a la fuente*/
+      /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
+      .inicio__servicios .section__iconos .icono {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 1.5rem; }
+      .inicio__servicios .section__iconos .icono::before {
+        font-size: 2rem; }
+    .inicio__servicios div {
+      padding: 1rem;
+      margin: 0.5rem; }
+    .inicio__servicios .servicios__inicio h2 {
+      font-size: 2.5em; }
+  /***seccion clientes aliados****/
+  .section__clientes {
+    /*contenedor titulo h2 a */
+    /*contenedor divs galeria */
+    /* contenedor general modal*/ }
+    .section__clientes .section__clientes-title {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 4rem 6rem 4rem 6rem;
+      /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/ }
+      .section__clientes .section__clientes-title a {
+        font-size: 1.6em; }
+    .section__clientes .section__clientes-galery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      margin: 1rem;
+      column-gap: 1rem; }
+    .section__clientes .modal {
+      /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
+      .section__clientes .modal .modal-content {
+        width: 32rem; }
   /************footer****************/
   .footer__general1 {
     padding-top: 3rem; }
   /*zise letra ancho form 540px*/
   .footer__general1 form {
-    width: 60%;
-    font-size: .5rem; }
+    width: 90%;
+    font-size: 0.5rem; }
   /*footer sacar el grid de llamanos 540*/
   .footer__phone-grid {
     display: none; }
@@ -573,7 +680,7 @@ html {
     .logo__footer .img__logo-footer {
       width: 150px; } }
 
-@media screen and (min-width: 541px) and (max-width: 720px) {
+@media screen and (min-width: 401px) and (max-width: 720px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador despues de 720*/
   .header {
@@ -586,6 +693,127 @@ html {
     /*ancho de logo en menu ham 720*/ }
     .navbar .header__navbar-logo {
       width: 120px; }
+  /************main*****************/
+  /*estilos h1 h2 h3 icons section inicio h1 pc nube article viene de main*/
+  /*contenedor imagen 1 y h1 */
+  .main__section1 {
+    flex-direction: column;
+    padding: 5rem 2rem 2rem 2rem;
+    /*estilos article h1 h2 h3 icons */
+    /*clase contenedor aside de iconos*/ }
+    .main__section1 article {
+      padding: 3rem 1rem;
+      border-radius: 1%; }
+      .main__section1 article h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 1rem 0 0 0; }
+      .main__section1 article h2 {
+        font-size: 2.2rem; }
+      .main__section1 article h3 {
+        font-size: 1.8rem; }
+    .main__section1 .section__icon {
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      left: 0;
+      /*div icon pc de boostrap*/
+      /*div icon nube de fontawensome*/ }
+      .main__section1 .section__icon .icon__pc {
+        position: relative;
+        top: -5rem;
+        right: 0;
+        /*clase icon bootstrap pc*/ }
+        .main__section1 .section__icon .icon__pc .icon__main {
+          font-size: 14rem; }
+      .main__section1 .section__icon .icon__nube {
+        position: relative;
+        bottom: 2rem;
+        left: 1.5rem;
+        /*clase icon fontawensome nube*/ }
+        .main__section1 .section__icon .icon__nube .fa-brands, .main__section1 .section__icon .icon__nube .header__section1 .icono__phone, .header__section1 .main__section1 .section__icon .icon__nube .icono__phone {
+          font-size: 22rem; }
+  /********seccion quienes somos inicio*/
+  /*contenedor 1 general titulo*/
+  .section__inicio {
+    /*contenedor inicio-historia article scroll inicio-quienes*/
+    /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+    /*contenedor article con scroll inicio-historia*/ }
+    .section__inicio .section__inicio-1 {
+      width: 100%;
+      justify-content: center;
+      /*titulo h2 quienes somos inicio*/ }
+      .section__inicio .section__inicio-1 h2 {
+        padding: 4rem 6rem 2rem 6rem;
+        text-align: center;
+        font-size: 2.5em; }
+    .section__inicio .section__inicio-3 {
+      height: 16rem;
+      overflow-y: scroll;
+      /*p de article con esta clase*/ }
+      .section__inicio .section__inicio-3 p {
+        font-size: 1.5rem;
+        padding: 0 3rem 0 2rem; }
+    .section__inicio .section__inicio-3::-webkit-scrollbar {
+      width: 0.5rem;
+      /* Ancho de la barra de desplazamiento */ }
+    .section__inicio .section__inicio-3::-webkit-scrollbar-thumb {
+      background-color: black;
+      /* Color del botón de desplazamiento */
+      border-radius: 0.5rem;
+      /* Borde redondeado del botón de desplazamiento */ }
+    .section__inicio .section__inicio-3::-webkit-scrollbar-thumb:hover {
+      background-color: #042ebe;
+      /* Cambio de color al pasar el mouse por encima */ }
+    .section__inicio .section__inicio-2 {
+      /*p de article con esta clase, no indentar*/ }
+      .section__inicio .section__inicio-2 p {
+        font-size: 1.5rem;
+        padding: 0 3rem 0 2rem; }
+  /*contenedor general seccion inicio servicios */
+  .inicio__servicios {
+    padding: 6rem 6rem;
+    /* Clases para los iconos icono esta en cada elemento*/
+    /*estilos delos div de  iconos*/
+    /*clase contenedor titulo h2 inicio__servicios*/ }
+    .inicio__servicios .section__iconos {
+      column-gap: 2rem;
+      row-gap: 2rem;
+      /*clase en cada enlace div da estilos a la fuente*/
+      /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
+      .inicio__servicios .section__iconos .icono {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 1.5rem; }
+      .inicio__servicios .section__iconos .icono::before {
+        font-size: 2rem; }
+    .inicio__servicios div {
+      padding: 1rem;
+      margin: 0.5rem; }
+    .inicio__servicios .servicios__inicio h2 {
+      font-size: 2.5em; }
+  /***seccion clientes aliados****/
+  .section__clientes {
+    /*contenedor titulo h2 a */
+    /*contenedor divs galeria */
+    /* contenedor general modal*/ }
+    .section__clientes .section__clientes-title {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 4rem 6rem 4rem 6rem;
+      /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/ }
+      .section__clientes .section__clientes-title a {
+        font-size: 1.6em; }
+    .section__clientes .section__clientes-galery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      margin: 1rem;
+      column-gap: 1rem; }
+    .section__clientes .modal {
+      /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
+      .section__clientes .modal .modal-content {
+        width: 40rem; }
   /************footer****************/
   /*zise letra ancho form 720px*/
   .footer__general1 form {
@@ -600,9 +828,9 @@ html {
     left: 15%;
     /*ancho logo*/ }
     .logo__footer .img__logo-footer {
-      width: 160px; } }
+      width: 14rem; } }
 
-@media screen and (min-width: 721px) and (max-width: 991px) {
+@media screen and (min-width: 721px) and (max-width: 1024px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador hasta 992*/
   .header {
@@ -615,16 +843,140 @@ html {
     /*ancho de logo en menu ham 991*/ }
     .navbar .header__navbar-logo {
       width: 140px; }
+  /************main*****************/
+  /*estilos h1 h2 h3 icons section inicio h1 pc nube article viene de main*/
+  /*contenedor imagen 1 y h1 */
+  .main__section1 {
+    flex-direction: column;
+    padding: 8rem 2rem 2rem 2rem;
+    /*estilos article h1 h2 h3 icons */
+    /*clase contenedor aside de iconos*/ }
+    .main__section1 article {
+      padding: 3rem 1rem;
+      border-radius: 1%; }
+      .main__section1 article h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 1rem 0 0 0; }
+      .main__section1 article h2 {
+        font-size: 2.2rem; }
+      .main__section1 article h3 {
+        font-size: 1.8rem; }
+    .main__section1 .section__icon {
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      left: 0;
+      /*div icon pc de boostrap*/
+      /*div icon nube de fontawensome*/ }
+      .main__section1 .section__icon .icon__pc {
+        position: relative;
+        top: -5rem;
+        right: 0;
+        /*clase icon bootstrap pc*/ }
+        .main__section1 .section__icon .icon__pc .icon__main {
+          font-size: 14rem; }
+      .main__section1 .section__icon .icon__nube {
+        position: relative;
+        bottom: 2rem;
+        left: 1.5rem;
+        /*clase icon fontawensome nube*/ }
+        .main__section1 .section__icon .icon__nube .fa-brands, .main__section1 .section__icon .icon__nube .header__section1 .icono__phone, .header__section1 .main__section1 .section__icon .icon__nube .icono__phone {
+          font-size: 22rem; }
+  /********seccion quienes somos inicio*/
+  /*contenedor 1 general titulo*/
+  .section__inicio {
+    /*contenedor inicio-historia article scroll inicio-quienes*/
+    /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+    /*contenedor article con scroll inicio-historia*/ }
+    .section__inicio .section__inicio-1 {
+      width: 100%;
+      justify-content: center;
+      /*titulo h2 quienes somos inicio*/ }
+      .section__inicio .section__inicio-1 h2 {
+        padding: 4rem 6rem 2rem 6rem;
+        text-align: center;
+        font-size: 2.5em; }
+    .section__inicio .section__inicio-3 {
+      height: 16rem;
+      overflow-y: scroll;
+      /*p de article con esta clase*/ }
+      .section__inicio .section__inicio-3 p {
+        font-size: 1.5rem;
+        padding: 0 3rem 0 2rem; }
+    .section__inicio .section__inicio-3::-webkit-scrollbar {
+      width: 0.5rem;
+      /* Ancho de la barra de desplazamiento */ }
+    .section__inicio .section__inicio-3::-webkit-scrollbar-thumb {
+      background-color: black;
+      /* Color del botón de desplazamiento */
+      border-radius: 0.5rem;
+      /* Borde redondeado del botón de desplazamiento */ }
+    .section__inicio .section__inicio-3::-webkit-scrollbar-thumb:hover {
+      background-color: #042ebe;
+      /* Cambio de color al pasar el mouse por encima */ }
+    .section__inicio .section__inicio-2 {
+      /*p de article con esta clase, no indentar*/ }
+      .section__inicio .section__inicio-2 p {
+        font-size: 1.5rem;
+        padding: 0 3rem 0 2rem; }
+  /*contenedor general seccion inicio servicios */
+  .inicio__servicios {
+    padding: 6rem 6rem;
+    /* Clases para los iconos icono esta en cada elemento*/
+    /*estilos delos div de  iconos*/
+    /*clase contenedor titulo h2 inicio__servicios*/ }
+    .inicio__servicios .section__iconos {
+      column-gap: 2rem;
+      row-gap: 2rem;
+      /*clase en cada enlace div da estilos a la fuente*/
+      /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
+      .inicio__servicios .section__iconos .icono {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 1.5rem; }
+      .inicio__servicios .section__iconos .icono::before {
+        font-size: 2rem; }
+    .inicio__servicios div {
+      padding: 1rem;
+      margin: 0.5rem; }
+    .inicio__servicios .servicios__inicio h2 {
+      font-size: 2.5em; }
+  /***seccion clientes aliados****/
+  .section__clientes {
+    /*contenedor titulo h2 a */
+    /*contenedor divs galeria */
+    /* contenedor general modal*/ }
+    .section__clientes .section__clientes-title {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 4rem 6rem 4rem 6rem;
+      /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/ }
+      .section__clientes .section__clientes-title a {
+        font-size: 1.6em; }
+    .section__clientes .section__clientes-galery {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      margin: 1rem;
+      column-gap: 1rem; }
+    .section__clientes .modal {
+      /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
+      .section__clientes .modal .modal-content {
+        width: 55rem; }
   /************footer****************/
+  /*padding icono phone y numero despues de form*/
+  .footer__llamanos {
+    padding: 0 1rem 0 3rem; }
   /*posicion logo footer 991*/
   .logo__footer {
     position: relative;
     left: 15%;
     /*ancho logo*/ }
     .logo__footer .img__logo-footer {
-      width: 160px; } }
+      width: 15rem; } }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1025px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
   .header {

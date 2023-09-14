@@ -1,4 +1,4 @@
-@media screen and (min-width: 1px) and (max-width: 540px) {
+@media screen and (min-width: 1px) and (max-width: 400px) {
 
     /************header****************/
 
@@ -14,20 +14,217 @@
 
         /*ancho de logo en menu ham 540*/
         .header__navbar-logo {
-            width: 120px;
+            width: $space-logo1;
+        }
+    }
+
+    /************main*****************/
+    /*estilos h1 h2 h3 icons section inicio h1 pc nube article viene de main*/
+    /*contenedor imagen 1 y h1 */
+    .main__section1 {
+        flex-direction: column;
+        padding: $space-xlarge $space-small $space-small $space-small;
+
+        /*estilos article h1 h2 h3 icons */
+        article {
+            padding: $space-smedium $space-xsmall;
+            border-radius: 1%;
+
+            h1 {
+                font-size: $text-new;
+                text-align: center;
+                padding: $space-xsmall 0 0 0;
+            }
+
+            h2 {
+                font-size: $text-new1;
+            }
+
+            h3 {
+                font-size:$text-new2;
+            }
+        }
+
+
+        /*clase contenedor aside de iconos*/
+        .section__icon {
+            flex-direction: column-reverse;
+            align-items: center;
+            position: relative;
+            left: 0;
+
+            /*div icon pc de boostrap*/
+            .icon__pc {
+                position: relative;
+                top: -5rem;
+                right: 0;
+
+                /*clase icon bootstrap pc*/
+                .icon__main {
+                    font-size: $space-extend;
+
+                }
+            }
+
+            /*div icon nube de fontawensome*/
+            .icon__nube {
+                position: relative;
+                bottom: $space-small;
+                left: $space-ssmall;
+
+                /*clase icon fontawensome nube*/
+                .fa-brands {
+                    font-size:$space-xxxlarge;
+                }
+            }
+
+        }
+
+    }
+
+    /********seccion quienes somos inicio*/
+    /*contenedor 1 general titulo*/
+    .section__inicio {
+
+        .section__inicio-1 {
+            width: 100%;
+            justify-content: center;
+
+            /*titulo h2 quienes somos inicio*/
+            h2 {
+                padding: $space-medium $space-large $space-small $space-large;
+                text-align: center;
+                font-size: $text-medium;
+
+            }
+
+        }
+
+        /*contenedor inicio-historia article scroll inicio-quienes*/
+        .section__inicio-3 {
+            height: $space-extend1;
+            overflow-y: scroll;
+
+            /*p de article con esta clase*/
+            p {
+                font-size: $space-ssmall;
+                padding: 0 $space-smedium 0 $space-small;
+            }
+
+        }
+
+        /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+        .section__inicio-3::-webkit-scrollbar {
+            width: $space-xxsmall;
+            /* Ancho de la barra de desplazamiento */
+        }
+
+        .section__inicio-3::-webkit-scrollbar-thumb {
+            background-color: $col-alternate;
+            /* Color del botón de desplazamiento */
+            border-radius: $space-xxsmall;
+            /* Borde redondeado del botón de desplazamiento */
+        }
+
+        .section__inicio-3::-webkit-scrollbar-thumb:hover {
+            background-color: $col-primary;
+            /* Cambio de color al pasar el mouse por encima */
+        }
+
+        /*contenedor article con scroll inicio-historia*/
+        .section__inicio-2 {
+
+            /*p de article con esta clase, no indentar*/
+            p {
+                font-size: $space-ssmall;
+                padding: 0 $space-smedium 0 $space-small;
+            }
+
+        }
+
+    }
+
+    /*contenedor general seccion inicio servicios */
+    .inicio__servicios {
+        padding: $space-large $space-large;
+
+        /* Clases para los iconos icono esta en cada elemento*/
+        .section__iconos {
+            column-gap: $space-small;
+            row-gap: $space-small;
+
+            /*clase en cada enlace div da estilos a la fuente*/
+            .icono {
+                font-size: $space-ssmall;
+                text-align: justify;
+                padding: $space-ssmall;
+            }
+
+            /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
+            .icono::before {
+                font-size: $space-small; // tamaño icono que es el pseudo before
+            }
+        }
+
+        /*estilos delos div de  iconos*/
+        div {
+            padding: $space-xsmall;
+            margin: $space-xxsmall;
+        }
+
+        /*clase contenedor titulo h2 inicio__servicios*/
+        .servicios__inicio {
+            h2 {
+                font-size: $text-medium;
+            }
+        }
+    }
+
+    /***seccion clientes aliados****/
+    .section__clientes {
+
+        /*contenedor titulo h2 a */
+        .section__clientes-title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: $space-medium $space-large $space-medium $space-large;
+
+            /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/
+            a {
+                font-size: $text-small;
+            }
+
+        }
+
+        /*contenedor divs galeria */
+        .section__clientes-galery {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            margin:$space-xsmall;
+            column-gap: $space-xsmall;
+        }
+
+        /* contenedor general modal*/
+        .modal {
+
+            /*sub contenedor de la modal tamaño contenedor que contiene  la img*/
+            .modal-content {
+                width: $space-superlarge;
+            }
         }
     }
 
     /************footer****************/
 
     .footer__general1 {
-        padding-top: 3rem;
+        padding-top: $space-smedium;
     }
 
     /*zise letra ancho form 540px*/
     .footer__general1 form {
-        width: 60%;
-        font-size: .5rem;
+        width: 90%;
+        font-size: $space-xxsmall;
     }
 
     /*footer sacar el grid de llamanos 540*/
@@ -43,14 +240,15 @@
 
         /*ancho logo*/
         .img__logo-footer {
-            width: 150px;
+            width: $space-logo4;
         }
 
     }
 
 }
 
-@media screen and (min-width: 541px) and (max-width: 720px) {
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
 
     /************header****************/
     /*  dejar fijo header a 0% del borde superior del navegador despues de 720*/
@@ -66,7 +264,203 @@
 
         /*ancho de logo en menu ham 720*/
         .header__navbar-logo {
-            width: 120px;
+            width: $space-logo1;
+        }
+    }
+
+    /************main*****************/
+    /*estilos h1 h2 h3 icons section inicio h1 pc nube article viene de main*/
+    /*contenedor imagen 1 y h1 */
+    .main__section1 {
+        flex-direction: column;
+        padding: $space-slarge $space-small $space-small$space-small;
+
+        /*estilos article h1 h2 h3 icons */
+        article {
+            padding: $space-smedium $space-xsmall;
+            border-radius: 1%;
+
+            h1 {
+                font-size: $text-new;
+                text-align: center;
+                padding: $space-xsmall 0 0 0;
+            }
+
+            h2 {
+                font-size: $text-new1;
+            }
+
+            h3 {
+                font-size:$text-new2;
+            }
+        }
+
+
+        /*clase contenedor aside de iconos*/
+        .section__icon {
+            flex-direction: column-reverse;
+            align-items: center;
+            position: relative;
+            left: 0;
+
+            /*div icon pc de boostrap*/
+            .icon__pc {
+                position: relative;
+                top: -5rem;
+                right: 0;
+
+                /*clase icon bootstrap pc*/
+                .icon__main {
+                    font-size: $space-extend;
+
+                }
+            }
+
+            /*div icon nube de fontawensome*/
+            .icon__nube {
+                position: relative;
+                bottom: $space-small;
+                left: $space-ssmall;
+
+                /*clase icon fontawensome nube*/
+                .fa-brands {
+                    font-size: $space-xxxlarge;
+                }
+            }
+        }
+
+    }
+
+    /********seccion quienes somos inicio*/
+    /*contenedor 1 general titulo*/
+    .section__inicio {
+
+        .section__inicio-1 {
+            width: 100%;
+            justify-content: center;
+
+            /*titulo h2 quienes somos inicio*/
+            h2 {
+                padding: $space-medium $space-large $space-small $space-large;
+                text-align: center;
+                font-size: $text-medium;
+
+            }
+
+        }
+
+        /*contenedor inicio-historia article scroll inicio-quienes*/
+        .section__inicio-3 {
+            height: $space-extend1;
+            overflow-y: scroll;
+
+            /*p de article con esta clase*/
+            p {
+                font-size: $space-ssmall;
+                padding: 0 $space-smedium 0 $space-small;
+            }
+
+        }
+
+        /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+        .section__inicio-3::-webkit-scrollbar {
+            width: $space-xxsmall;
+            /* Ancho de la barra de desplazamiento */
+        }
+
+        .section__inicio-3::-webkit-scrollbar-thumb {
+            background-color: $col-alternate;
+            /* Color del botón de desplazamiento */
+            border-radius: $space-xxsmall;
+            /* Borde redondeado del botón de desplazamiento */
+        }
+
+        .section__inicio-3::-webkit-scrollbar-thumb:hover {
+            background-color: $col-primary;
+            /* Cambio de color al pasar el mouse por encima */
+        }
+
+        /*contenedor article con scroll inicio-historia*/
+        .section__inicio-2 {
+
+            /*p de article con esta clase, no indentar*/
+            p {
+                font-size: $space-ssmall;
+                padding: 0 $space-smedium 0 $space-small;
+            }
+
+        }
+
+    }
+
+    /*contenedor general seccion inicio servicios */
+    .inicio__servicios {
+        padding: $space-large $space-large;
+
+        /* Clases para los iconos icono esta en cada elemento*/
+        .section__iconos {
+            column-gap: $space-small;
+            row-gap: $space-small;
+
+            /*clase en cada enlace div da estilos a la fuente*/
+            .icono {
+                font-size: $space-ssmall;
+                text-align: justify;
+                padding: $space-ssmall;
+            }
+
+            /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
+            .icono::before {
+                font-size: $space-small; // tamaño icono que es el pseudo before
+            }
+        }
+
+        /*estilos delos div de  iconos*/
+        div {
+            padding: $space-xsmall;
+            margin: $space-xxsmall;
+        }
+
+        /*clase contenedor titulo h2 inicio__servicios*/
+        .servicios__inicio {
+            h2 {
+                font-size: $text-medium;
+            }
+        }
+    }
+
+    /***seccion clientes aliados****/
+    .section__clientes {
+
+        /*contenedor titulo h2 a */
+        .section__clientes-title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: $space-medium $space-large $space-medium $space-large;
+
+            /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/
+            a {
+                font-size: $text-small;
+            }
+
+        }
+
+        /*contenedor divs galeria */
+        .section__clientes-galery {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            margin: 1rem;
+            column-gap: 1rem;
+        }
+
+        /* contenedor general modal*/
+        .modal {
+
+            /*sub contenedor de la modal tamaño contenedor que contiene  la img*/
+            .modal-content {
+                width: $space-xm-large;
+            }
         }
     }
 
@@ -90,14 +484,14 @@
 
         /*ancho logo*/
         .img__logo-footer {
-            width: 160px;
+            width: $space-extend;
         }
 
     }
 
 }
 
-@media screen and (min-width: 721px) and (max-width: 991px) {
+@media screen and (min-width: 721px) and (max-width: 1024px) {
 
     /************header****************/
     /*  dejar fijo header a 0% del borde superior del navegador hasta 992*/
@@ -113,26 +507,229 @@
 
         /*ancho de logo en menu ham 991*/
         .header__navbar-logo {
-            width: 140px;
+            width: $space-logo3;
         }
     }
 
+    /************main*****************/
+    /*estilos h1 h2 h3 icons section inicio h1 pc nube article viene de main*/
+    /*contenedor imagen 1 y h1 */
+    .main__section1 {
+        flex-direction: column;
+        padding: $space-extend2 $space-small $space-small $space-small;
+
+        /*estilos article h1 h2 h3 icons */
+        article {
+            padding: $space-smedium $space-xsmall;
+            border-radius: 1%;
+
+            h1 {
+                font-size: $text-new;
+                text-align: center;
+                padding: $space-xsmall 0 0 0;
+            }
+
+            h2 {
+                font-size: $text-new1;
+            }
+
+            h3 {
+                font-size: $text-new2;
+            }
+        }
+
+
+        /*clase contenedor aside de iconos*/
+        .section__icon {
+            flex-direction: column-reverse;
+            align-items: center;
+            position: relative;
+            left: 0;
+
+            /*div icon pc de boostrap*/
+            .icon__pc {
+                position: relative;
+                top: -5rem;
+                right: 0;
+
+                /*clase icon bootstrap pc*/
+                .icon__main {
+                    font-size: $space-extend;
+
+                }
+            }
+
+            /*div icon nube de fontawensome*/
+            .icon__nube {
+                position: relative;
+                bottom:$space-small;
+                left: $space-ssmall;
+
+                /*clase icon fontawensome nube*/
+                .fa-brands {
+                    font-size: $space-xxxlarge;
+                }
+            }
+        }
+
+    }
+
+    /********seccion quienes somos inicio*/
+    /*contenedor 1 general titulo*/
+    .section__inicio {
+
+        .section__inicio-1 {
+            width: 100%;
+            justify-content: center;
+
+            /*titulo h2 quienes somos inicio*/
+            h2 {
+                padding: $space-medium $space-large $space-small $space-large;
+                text-align: center;
+                font-size: $text-medium;
+
+            }
+
+        }
+
+        /*contenedor inicio-historia article scroll inicio-quienes*/
+        .section__inicio-3 {
+            height:$space-extend1;
+            overflow-y: scroll;
+
+            /*p de article con esta clase*/
+            p {
+                font-size: $space-ssmall;
+                padding: 0 $space-smedium 0 $space-small;
+            }
+
+        }
+
+        /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
+        .section__inicio-3::-webkit-scrollbar {
+            width: $space-xxsmall;
+            /* Ancho de la barra de desplazamiento */
+        }
+
+        .section__inicio-3::-webkit-scrollbar-thumb {
+            background-color: $col-alternate;
+            /* Color del botón de desplazamiento */
+            border-radius: $space-xxsmall;
+            /* Borde redondeado del botón de desplazamiento */
+        }
+
+        .section__inicio-3::-webkit-scrollbar-thumb:hover {
+            background-color: $col-primary;
+            /* Cambio de color al pasar el mouse por encima */
+        }
+
+        /*contenedor article con scroll inicio-historia*/
+        .section__inicio-2 {
+
+            /*p de article con esta clase, no indentar*/
+            p {
+                font-size: $space-ssmall;
+                padding: 0 $space-smedium 0 $space-small;
+            }
+
+        }
+
+    }
+
+    /*contenedor general seccion inicio servicios */
+    .inicio__servicios {
+        padding: $space-large $space-large;
+
+        /* Clases para los iconos icono esta en cada elemento*/
+        .section__iconos {
+            column-gap: $space-small;
+            row-gap: $space-small;
+
+            /*clase en cada enlace div da estilos a la fuente*/
+            .icono {
+                font-size: $space-ssmall;
+                text-align: justify;
+                padding: $space-ssmall;
+            }
+
+            /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
+            .icono::before {
+                font-size: $space-small; // tamaño icono que es el pseudo before
+            }
+        }
+
+        /*estilos delos div de  iconos*/
+        div {
+            padding: $space-xsmall;
+            margin: $space-xxsmall;
+        }
+
+        /*clase contenedor titulo h2 inicio__servicios*/
+        .servicios__inicio {
+            h2 {
+                font-size: $text-medium;
+            }
+        }
+    }
+
+    /***seccion clientes aliados****/
+    .section__clientes {
+
+        /*contenedor titulo h2 a */
+        .section__clientes-title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: $space-medium $space-large $space-medium $space-large;
+
+            /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/
+            a {
+                font-size: $text-small;
+            }
+
+        }
+
+        /*contenedor divs galeria */
+        .section__clientes-galery {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            margin: $space-xsmall;
+            column-gap: $space-xsmall;
+        }
+
+        /* contenedor general modal*/
+        .modal {
+
+            /*sub contenedor de la modal tamaño contenedor que contiene  la img*/
+            .modal-content {
+                width: $space-xx-large;
+            }
+        }
+    }
+
+    
     /************footer****************/
+
+    /*padding icono phone y numero despues de form*/
+    .footer__llamanos{
+        //clase solo en mediaquieries < 720px
+            padding: 0 $space-xsmall 0 $space-smedium;
+    }
+
     /*posicion logo footer 991*/
     .logo__footer {
         position: relative;
         left: 15%;
 
-
         /*ancho logo*/
         .img__logo-footer {
-            width: 160px;
+            width:$space-xslarge;
         }
 
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1025px) {
 
     /************header****************/
     /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
@@ -142,7 +739,7 @@
 
         /*ancho de logo en menu ham 991*/
         .header__navbar-logo {
-            width: 120px;
+            width: $space-logo1;
         }
     }
 
@@ -159,7 +756,7 @@
 
         /*ancho logo*/
         .img__logo-footer {
-            width: 180px;
+            width: $space-logo2;
         }
 
     }

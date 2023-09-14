@@ -9,14 +9,11 @@
         display: flex;
         width: 80%;
 
-        /*elementos contenedor section__inicio-1 */
-        .section__inicio-1,
-
         /*titulo h2 quienes somos inicio*/
         h2 {
             font-family: 'Open Sans', sans-serif;
             color: $col-alternate;
-            font-size: $text-base ;
+            font-size: $text-large ;
             font-weight: 900;
             padding: $space-medium $space-large $space-small $space-large;
             text-align: center;
@@ -24,41 +21,43 @@
         }
     }
 
-    /*contenedor inicio-historia article SIN scroll inicio-quienes*/
+    /*contenedor inicio-historia article scroll inicio-quienes*/
     .section__inicio-3 {
-        height: 16rem;
+        height: $space-extend1;
         overflow-y: hidden;
+
+        /*p de article con esta clase, no indentar*/
+        p {
+            font-size: $space-small;
+            padding: 0 $space-xxlarge 0 $space-xxxlarge;
+            color: $col-alternate;
+            font-weight: 600;
+            text-align: justify;
+        }
+
     }
 
-    /*p de article con esta clase, no indentar*/
-    .section__inicio-3,
-    p {
-        font-size: $space-small;
-        padding: 0 $space-large 0 $space-xlarge;
-        color: $col-alternate;
-        font-weight: 600;
-        text-align: justify;
-    }
 
     /*contenedor article con scroll inicio-historia*/
     .section__inicio-2 {
-        height: 16rem;
+        height: $space-extend1;
         overflow-y: scroll;
+
+        /*p de article con esta clase, no indentar*/
+        p {
+            font-size: $space-small;
+            padding: 0 $space-xxlarge 0 $space-xxxlarge;
+            color: $col-alternate;
+            font-weight: 600;
+            text-align: justify;
+        }
+
     }
 
-    /*p de article con esta clase, no indentar*/
-    .section__inicio-2,
-    p {
-        font-size: $space-small;
-        padding: 0 $space-large 0 $space-xlarge;
-        color: $col-alternate;
-        font-weight: 600;
-        text-align: justify;
-    }
 
     /*estilos  para la barra de desplazamiento scroll crome-edge-opera nota: en mozilla no se  toman*/
     .section__inicio-2::-webkit-scrollbar {
-        width: $space-xsmall;
+        width: $space-xxsmall;
         /* Ancho de la barra de desplazamiento */
     }
 
@@ -83,19 +82,20 @@
     }
 
     /*div link inicio*/
-    .inicio__link,
-    a {
+    .inicio__link {
         text-align: end;
-        font-size: $space-small;
-        color: $col-alternate;
         padding: $space-small $space-xxlarge $space-small 0;
-        font-family: 'Open Sans', sans-serif
-    }
+        font-family: 'Open Sans', sans-serif;
+        font-size: $space-small;
 
-    a:hover {
-        color: $col-primary;
-    }
+        a {
+            color: $col-alternate;
+        }
 
+        a:hover {
+            color: $col-primary;
+        }
+    }
 }
 
 /*contenedor general seccion inicio servicios */
@@ -117,7 +117,7 @@
         column-gap: $space-slarge;
         row-gap: $space-smedium;
 
-        /*clase en cada enlace div estilos del icono*/
+        /*clase en cada enlace div da estilos a la fuente*/
         .icono {
             font-size: $space-small;
             color: $col-alternate;
@@ -127,9 +127,9 @@
             color: $col-primary;
         }
 
-        /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos a las clases fa que son de fontawensome, cada icono tomara estos estilos*/
+        /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
         .icono::before {
-            font-size: $space-small-1;
+            font-size: $space-small-1; // tamaño icono que es el pseudo before
             margin-right: $space-xsmall;
             font-family: FontAwesome;
         }
@@ -161,7 +161,7 @@
     }
 
     /*estilos delos div de  iconos*/
-    .inicio__servicios,
+
     div {
         background-color: $col-cuatro;
         padding: $space-small;
@@ -170,33 +170,31 @@
         font-family: 'Roboto', sans-serif;
     }
 
-}
+    /*clase contenedor titulo h2 inicio__servicios*/
+    .servicios__inicio {
+        color: $col-alternate;
+        margin-bottom: $space-smedium;
 
+        h2 {
+            font-size: $text-slarge;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 900;
+        }
+    }
 
-/*clase contenedor titulo h2 inicio__servicios*/
-.servicios__inicio {
-    color: $col-alternate;
-    margin-bottom: $space-smedium;
-
-    h2 {
-        font-size: $text-slarge;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 900;
+    /*se le debe dar un valor a la clase para usar la pseudoclase hover*/
+    .servicios__inicio:hover {
+        color: $col-primary;
     }
 }
 
-/*se le debe dar un valor a la clase para usar la pseudoclase hover*/
-.servicios__inicio:hover {
-    color: $col-primary;
-}
 
-/*seccion clientes-inicio*/
+/****************seccion clientes-inicio*******/
 /*contenedor general titulo h2 y galeria*/
 .section__clientes {
     display: flex;
     flex-direction: column;
     background: linear-gradient(($col-secondary), ($col-extra), ($col-extra1));
-    ;
 
     /*contenedor titulo h2 a */
     .section__clientes-title {
@@ -208,14 +206,15 @@
         /*estos estilos deben darse  al h2 directamente*/
 
         /*estos estilos deben darse  al a directamente enlace titulo inicio-clientes*/
-        a{
+        a {
             color: $col-alternate;
             font-size: $text-base ;
             font-weight: 900;
         }
+
         /*hover enlace titulo inicio-clientes*/
-        a:hover{
-            color:$col-primary;
+        a:hover {
+            color: $col-primary;
         }
     }
 
@@ -226,15 +225,15 @@
         grid-template-rows: repeat(2, 1fr);
         justify-items: center;
         gap: $space-slarge;
-        margin: 2rem $space-xxlarge $space-medium $space-xxlarge ;
+        margin: $space-small $space-xxlarge $space-medium $space-xxlarge ;
 
         /*clase encada div galeria */
         .inicio__galery {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 140px;
-            height: 90px;
+            width: $space-logo3;
+            height: $space-logo5;
             background-color: $col-secondary;
             border-radius: $space-xsmall ;
 
@@ -250,7 +249,7 @@
 
             /*clase pading img grinsa*/
             .inicio__galery-img1 {
-                padding: 0 1rem 0 1rem;
+                padding: 0 $space-xsmall 0 $space-xsmall;
             }
         }
 
@@ -277,74 +276,58 @@
             color: $col-alternate;
             font-weight: bold;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);;
+            text-shadow: $space-border-bottom $space-border-bottom $space-shadow-1 $col-alternate1;
+            ;
         }
 
     }
 
-    /*seccion inicio-modal */
-    /* Oculta la modal por defecto era opcion para css */
+    /***seccion inicio-modal ***/
+    /* contenedor general modal*/
     .modal {
-        // display: none;
         position: fixed;
-        // top: 18rem; //baja la img al desplegar la modal
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 1;
-        padding: 0 10rem 0 10rem; //padding lateral de la img al desplegar la modal
-    }
+        background: $background-modal;
+        z-index: 20;
 
-    // /* Muestra la modal cuando se encuentra en :target Nota esta clase dispara la modal luego de cerrar el js si esta activa, se usa para CSS*/
-    // .modal:target {
-    //     display: block;
-    // }
-
-    //NOTA: El CSS define una regla para ocultar inicialmente la modal con .modal { display: none; } y luego muestra la modal cuando se encuentra en :target con .modal:target { display: block; }. Esto debería funcionar correctamente para mostrar la modal cuando se hace clic en un enlace que tiene un href correspondiente al ID de la modal.
-
-    /* Estilos para el contenido de la modal que se posicione en el centro */
-    .modal-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 20px;
-        text-align: center;
-        border-radius: $space-xsmall;
-        width: 70rem; //ancho del contenedor de img
-        // position: relative;
-    }
-
-    /* Estilos para el enlace de cierre */
-    //div contenedor de i
-    .cerrar {
-
-        //clase enlace i de fontawensome cambia estilos icono close
-        .fa-rectangle-xmark {
-            color: $col-extra;
+        /* Estilos para el contenido de la modal que se posicione en el centro */
+        .modal-content {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 5rem;
-            text-decoration: none;
-            z-index: 10;
-            cursor: pointer;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: $space-px;
+            text-align: center;
+            border-radius: $space-xsmall;
+            width: $space-mega-large; //ancho del contenedor de la img
         }
 
-        //hover icono close
-        .fa-rectangle-xmark:hover {
-            color: $col-extra1;
-        }
-    }
+        /* Estilos para el enlace de cierre */
+        //div contenedor de i
+        .cerrar {
 
-    /* Estilos para la imagen en la modal */
-    .modal-content img {
-        max-width: 100%;
-        // height: 80vh;
-        display: block;
-        margin: 0 auto;
-        padding: 4rem 2rem;
+            //clase enlace i de fontawensome cambia estilos icono close
+            .fa-rectangle-xmark {
+                color: $col-extra;
+                position: absolute;
+                top: $space-px1;
+                right: $space-px1;
+                font-size: $space-slarge;
+                text-decoration: none;
+                z-index: 20;
+                cursor: pointer;
+            }
+
+            //hover icono close
+            .fa-rectangle-xmark:hover {
+                color: $col-extra1;
+            }
+        }
+
+        /* Estilos para la imagen cuando se despliega la modal  */
+        .modal-content img {
+            max-width: 100%;
+            padding: $space-medium $space-small; //interno
+        }
     }
 }

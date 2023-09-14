@@ -4,39 +4,40 @@
     background-size: cover;
     background-position: center, center;
     color: $col-secondary;
-    padding: 10rem 6rem 10rem 6rem;
+    padding: $space-xlarge $space-large $space-xlarge $space-large;
     display: flex;
 
-    /*estilos h1 h2 h3 icons */
-    .main__section1,
+    /*estilos article h1 h2 h3 icons */
 
     article {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 50%;
+        // width: 50%;
         background-color: $col-form ;
-        padding: 4rem 2.5rem;
+        padding: $space-medium $text-new;
         border-radius: 1%;
+
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: $text-slarge ;
+            font-weight: 900;
+            padding-bottom: $space-small;
+            text-shadow: $space-border-bottom $space-border-bottom $space-shadow-1 $col-tres;
+        }
+    
+        h2 {
+            font-size: $text-large ;
+            font-weight: 900;
+        }
+    
+        h3 {
+            font-size: $text-medium ;
+            font-weight: 900;
+        }
     }
 
-    h1 {
-        font-family: 'Open Sans', sans-serif;
-        font-size: $text-slarge ;
-        font-weight: 900;
-        padding-bottom: 2rem;
-        text-shadow: 2px 2px 4px $col-tres;
-    }
-
-    h2 {
-        font-size: $text-large ;
-        font-weight: 900;
-    }
-
-    h3 {
-        font-size: $text-medium ;
-        font-weight: 900;
-    }
+    
 
     /*clase contenedor aside de iconos*/
     .section__icon {

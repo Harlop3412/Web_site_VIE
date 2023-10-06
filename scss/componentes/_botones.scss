@@ -5,3 +5,11 @@
     color: $col-secondary;
     background-color: $col-primary;
 }
+
+//posicion boton comprar modal productos
+.btn__position{
+    position: relative;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente el botón */
+}

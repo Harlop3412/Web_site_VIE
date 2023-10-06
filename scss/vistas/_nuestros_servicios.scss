@@ -1,0 +1,95 @@
+/* Estilos para la modal de fondo */
+.modal__background-servicios {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background-modal;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    /* Estilos para la modal de contenido */
+    .modal__content-servicios {
+        background-color: $col-ultimate;
+        text-align: center;
+        border-radius: $space-xsmall;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 110rem;
+        height: 50rem;
+        overflow: auto;
+        animation: slideDown 0.5s ease;
+
+        /*estilos del contenido de la modal*/
+        /*contenedor general aside-contenido-modal*/
+        .contenedor-servicio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, $col-ultimate, $col-extra1);
+            flex-grow: 1; /* Esto permite que el contenedor se expanda para llenar la altura disponible */
+            padding: 3rem;
+
+            /*titulo de la modal*/
+            .titulo-servicio {
+                font-size: $space-smedium;
+                margin-top: $space-px;
+                color: $col-alternate;
+                text-shadow: $space-border-bottom $space-border-bottom $space-shadow-1 $col-alternate1;
+            }
+
+            /*contenedor ul-img*/
+            .contenedor-texto {
+                text-align: left;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+
+                /*clase en img-servicio*/
+                .imagen-servicio {
+                    width: 40%;
+                    max-height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    top: 15%;
+                }
+
+                /*clase del ul*/
+                .lista-servicio {
+                    list-style-type: none;
+                    font-size: $space-small;
+                    color: $col-alternate;
+                    text-shadow: $space-border-bottom $space-border-bottom $space-shadow-1 $col-alternate1;
+                    margin-bottom: 0;
+                }
+
+                /* Viñeta pseudoelemento */
+                .lista-servicio li::before {
+                    content: "•";
+                    color: $col-primary;
+                    /* Color de la viñeta */
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
+                }
+
+                /* Aumenta el interlineado li */
+                .lista-servicio li {
+                    line-height: 1.5;
+                }
+            }
+        }
+
+    }
+}

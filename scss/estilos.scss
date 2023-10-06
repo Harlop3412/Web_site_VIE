@@ -22,9 +22,12 @@
 
 /***************************componentes_botones.scss*************************/
 @import'componentes/botones';
+@import'componentes/animaciones';
 
 /*vistas*/
 @import'vistas/inicio';
+@import'vistas/nuestros_servicios';
+@import'vistas/nuestros_productos';
 
 /*************************utilidades_mediaquieries***************************/
 @import'utilidades/mediaqueries';

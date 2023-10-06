@@ -29,7 +29,8 @@ html {
 /*z-index mayor pasa por delante del logo footer*/
 .header {
   position: relative;
-  z-index: 50; }
+  z-index: 50;
+  display: none; }
 
 /*estilos del flex */
 .header__section1 {
@@ -287,6 +288,22 @@ html {
   color: white;
   background-color: #042ebe; }
 
+.btn__position {
+  position: relative;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Centra horizontalmente el botón */ }
+
+/* animación para modal*/
+@keyframes slideDown {
+  from {
+    transform: translateY(30%);
+    opacity: 0; }
+  to {
+    transform: translateX(-50%);
+    opacity: 1; } }
+
 /*vistas*/
 /*contenedor quienes somos inicio*/
 .section__inicio {
@@ -528,6 +545,225 @@ html {
       max-width: 100%;
       padding: 4rem 2rem; }
 
+/* Estilos para la modal de fondo */
+.modal__background-servicios {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* Estilos para la modal de contenido */ }
+  .modal__background-servicios .modal__content-servicios {
+    background-color: #e8eded;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110rem;
+    height: 50rem;
+    overflow: auto;
+    animation: slideDown 0.5s ease;
+    /*estilos del contenido de la modal*/
+    /*contenedor general aside-contenido-modal*/ }
+    .modal__background-servicios .modal__content-servicios .contenedor-servicio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom, #e8eded, rgba(4, 46, 190, 0.6));
+      flex-grow: 1;
+      /* Esto permite que el contenedor se expanda para llenar la altura disponible */
+      padding: 3rem;
+      /*titulo de la modal*/
+      /*contenedor ul-img*/ }
+      .modal__background-servicios .modal__content-servicios .contenedor-servicio .titulo-servicio {
+        font-size: 3rem;
+        margin-top: 20px;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+      .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        /*clase en img-servicio*/
+        /*clase del ul*/
+        /* Viñeta pseudoelemento */
+        /* Aumenta el interlineado li */ }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .imagen-servicio {
+          width: 40%;
+          max-height: 100%;
+          object-fit: cover;
+          position: relative;
+          top: 15%; }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .lista-servicio {
+          list-style-type: none;
+          font-size: 2rem;
+          color: black;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          margin-bottom: 0; }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .lista-servicio li::before {
+          content: "•";
+          color: #042ebe;
+          /* Color de la viñeta */
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em; }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .lista-servicio li {
+          line-height: 1.5; }
+
+/* Estilos para la modal de fondo */
+.modal__background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  /* Estilos para la modal de contenido */
+  /*clase contenedor modal-form*/ }
+  .modal__background .modal__content, .modal__background .modal__content-form {
+    background-color: white;
+    padding-top: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120rem;
+    height: 50rem;
+    gap: 3rem;
+    overflow: auto;
+    animation: slideDown 0.5s ease;
+    /*******estilos contenedor producto******/
+    /* Agrega un aumento de escala a las imágenes en clic */
+    /*div flex donde se imprimiran los productos, clase desde js function mostrarProductos(array)*/
+    /*h3 se imprimira el titulo de los productos esta clase es desde js  ***/ }
+    .modal__background .modal__content .cont__producto, .modal__background .modal__content-form .cont__producto {
+      font-size: 1.5rem;
+      background-color: #9696ff;
+      padding: 1rem;
+      margin: 0 1.5rem 1rem 0rem;
+      border-radius: 0.5rem;
+      color: black;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 6px #042ebe, 0 1px 3px black;
+      width: 16rem;
+      cursor: pointer; }
+    .modal__background .modal__content .cont__producto:hover, .modal__background .modal__content-form .cont__producto:hover {
+      background-color: rgba(4, 46, 190, 0.6);
+      transform: scale(1.2);
+      /* Escala al 120% en hover */
+      transition: transform 0.3s ease;
+      /* Agrega una transición suave */ }
+    .modal__background .modal__content .cont__producto:active, .modal__background .modal__content-form .cont__producto:active {
+      transform: scale(1.2);
+      /* Escala al 120% en clic */
+      transition: transform 0.3s ease;
+      /* Agrega una transición rápida */ }
+    .modal__background .modal__content .productoFlex, .modal__background .modal__content-form .productoFlex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .modal__background .modal__content .tituloProductoH3, .modal__background .modal__content-form .tituloProductoH3 {
+      color: black;
+      font-size: 3.8em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 900;
+      margin-top: 2.5rem; }
+  .modal__background .modal__content-form {
+    top: 50%;
+    width: 40rem;
+    max-height: 100%; }
+
+/*******clase js para dejar prductos selecionados al hacer clic No indentar este bloque*/
+.producto__seleccionado {
+  color: inherit; }
+
+/*****esta clase tiene los estilos y trabaja en js NOTA no indentar, elementos se crean dinamicamente y puede dar error*/
+.seleccionado {
+  background-color: rgba(4, 46, 190, 0.6);
+  transform: scale(1.2);
+  /* Escala al 120% en hover */
+  transition: transform 0.3s ease;
+  /* Agrega una transición suave */ }
+
+/* form general de productos */
+.form__productos {
+  padding: 0 1rem 2rem 1rem;
+  color: white;
+  background-color: rgba(4, 46, 190, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+  /* fieldset del form */ }
+  .form__productos fieldset {
+    font-size: 1.5rem;
+    /* formProductos clase estilos de cada input*/ }
+    .form__productos fieldset legend {
+      font-size: 2rem;
+      font-weight: 500; }
+    .form__productos fieldset .FormProductos {
+      font-size: 1.5rem; }
+
+/* Estilos para el enlace de "Cerrar" */
+.cerrarModal {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  text-align: center;
+  padding: 0 2rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Transición de colores suave */
+  position: relative;
+  top: 6rem;
+  font-size: 1.5rem;
+  position: relative;
+  top: 0%;
+  /*contiene el icono y sirve para centrarlo en el div dandole flex al contenedor principal*/ }
+  .cerrarModal i {
+    background-color: #042ebe; }
+  .cerrarModal i:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    transform: scale(1.2);
+    /* Escala al 120% en hover */
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */ }
+
+/* Cambia estilos del icono cerrar clase fontawnsome */
+.fa-xmark {
+  font-size: 3rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white; }
+
 /*************************utilidades_mediaquieries***************************/
 @media screen and (min-width: 1px) and (max-width: 400px) {
   /************header****************/
@@ -630,7 +866,7 @@ html {
       /*clase en cada enlace div da estilos a la fuente*/
       /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
       .inicio__servicios .section__iconos .icono {
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: justify;
         padding: 1.5rem; }
       .inicio__servicios .section__iconos .icono::before {
@@ -662,6 +898,24 @@ html {
       /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
       .section__clientes .modal .modal-content {
         width: 32rem; }
+  /****************seccion productos ********************/
+  .modal__background .modal__content, .modal__background .modal__content-form {
+    width: 35rem;
+    height: 43rem; }
+    .modal__background .modal__content .productoFlex, .modal__background .modal__content-form .productoFlex {
+      flex-direction: row; }
+      .modal__background .modal__content .productoFlex .producto__seleccionado .cont__producto, .modal__background .modal__content-form .productoFlex .producto__seleccionado .cont__producto {
+        font-size: 1rem;
+        width: 5rem;
+        padding: .5rem;
+        overflow-y: hidden; }
+    .modal__background .modal__content .tituloProductoH3, .modal__background .modal__content-form .tituloProductoH3 {
+      font-size: 2rem; }
+  .modal__background .btn__position {
+    top: 5%; }
+  .modal__background .modal__content-form {
+    position: relative;
+    top: 45%; }
   /************footer****************/
   .footer__general1 {
     padding-top: 3rem; }
@@ -680,7 +934,7 @@ html {
     .logo__footer .img__logo-footer {
       width: 150px; } }
 
-@media screen and (min-width: 401px) and (max-width: 720px) {
+@media screen and (min-width: 401px) and (max-width: 768px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador despues de 720*/
   .header {
@@ -814,6 +1068,25 @@ html {
       /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
       .section__clientes .modal .modal-content {
         width: 40rem; }
+  /****************seccion productos ********************/
+  .modal__background .modal__content, .modal__background .modal__content-form {
+    width: 45rem;
+    height: 43rem; }
+    .modal__background .modal__content .productoFlex, .modal__background .modal__content-form .productoFlex {
+      flex-direction: row; }
+      .modal__background .modal__content .productoFlex .producto__seleccionado .cont__producto, .modal__background .modal__content-form .productoFlex .producto__seleccionado .cont__producto {
+        font-size: 1rem;
+        width: 5rem;
+        padding: .5rem;
+        overflow-y: hidden; }
+    .modal__background .modal__content .tituloProductoH3, .modal__background .modal__content-form .tituloProductoH3 {
+      font-size: 2rem; }
+  .modal__background .btn__position {
+    top: 5%; }
+  .modal__background .modal__content-form {
+    position: relative;
+    top: 42%;
+    width: 40rem; }
   /************footer****************/
   /*zise letra ancho form 720px*/
   .footer__general1 form {
@@ -830,7 +1103,7 @@ html {
     .logo__footer .img__logo-footer {
       width: 14rem; } }
 
-@media screen and (min-width: 721px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador hasta 992*/
   .header {
@@ -964,6 +1237,25 @@ html {
       /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
       .section__clientes .modal .modal-content {
         width: 55rem; }
+  /****************seccion productos ********************/
+  .modal__background .modal__content, .modal__background .modal__content-form {
+    width: 82rem;
+    height: 43rem; }
+    .modal__background .modal__content .productoFlex, .modal__background .modal__content-form .productoFlex {
+      flex-direction: row; }
+      .modal__background .modal__content .productoFlex .producto__seleccionado .cont__producto, .modal__background .modal__content-form .productoFlex .producto__seleccionado .cont__producto {
+        font-size: 1.5rem;
+        width: 8rem;
+        padding: .5rem;
+        overflow-y: hidden; }
+    .modal__background .modal__content .tituloProductoH3, .modal__background .modal__content-form .tituloProductoH3 {
+      font-size: 2rem; }
+  .modal__background .btn__position {
+    top: 5%; }
+  .modal__background .modal__content-form {
+    position: relative;
+    top: 42%;
+    width: 40rem; }
   /************footer****************/
   /*padding icono phone y numero despues de form*/
   .footer__llamanos {
@@ -976,7 +1268,47 @@ html {
     .logo__footer .img__logo-footer {
       width: 15rem; } }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  /************header****************/
+  /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
+  .header {
+    position: sticky;
+    top: 0%;
+    /*ancho de logo en menu ham 991*/ }
+    .header .header__navbar-logo {
+      width: 120px; }
+  /********main****************/
+  /****************seccion productos ********************/
+  .modal__background .modal__content, .modal__background .modal__content-form {
+    width: 98rem;
+    height: 43rem; }
+    .modal__background .modal__content .productoFlex, .modal__background .modal__content-form .productoFlex {
+      flex-direction: row; }
+      .modal__background .modal__content .productoFlex .producto__seleccionado .cont__producto, .modal__background .modal__content-form .productoFlex .producto__seleccionado .cont__producto {
+        font-size: 1.5rem;
+        width: 8rem;
+        padding: .5rem;
+        overflow-y: hidden; }
+    .modal__background .modal__content .tituloProductoH3, .modal__background .modal__content-form .tituloProductoH3 {
+      font-size: 2rem; }
+  .modal__background .btn__position {
+    top: 5%; }
+  .modal__background .modal__content-form {
+    position: relative;
+    top: 42%;
+    width: 40rem; }
+  /************footer****************/
+  /*footer para que los elementos del mapa corten en <= 992px*/
+  .footer__section-map {
+    flex-wrap: nowrap; }
+  .logo__footer {
+    position: relative;
+    left: 15%;
+    /*ancho logo*/ }
+    .logo__footer .img__logo-footer {
+      width: 180px; } }
+
+@media screen and (min-width: 1301px) {
   /************header****************/
   /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
   .header {

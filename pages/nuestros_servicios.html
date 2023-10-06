@@ -124,32 +124,58 @@
         <!--seccion de inicio-servicios-->
         <section class="inicio__servicios">
             <a href="" class="servicios__inicio">
-                <div>
+                <div class="animate__animated animate__flipInY">
                     <h2>Nuestros Servicios</h2>
                 </div>
             </a>
             <section class="section__iconos">
                 <!--libreria fontawnsome-->
                 <a href="">
-                    <div class="icono fa fa-briefcase">Asesoría en Gestión Empresarial</div>
+                    <div id='divGestionEmpresarial' class="icono fa fa-briefcase">Asesoría en Gestión Empresarial</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-users">Apoyo en Gestión de Talento Humano</div>
+                    <div id='divGestionTalentoHumano' class="icono fa fa-users">Apoyo en Gestión de Talento Humano</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-book">Apoyo en Gestión Tributaria</div>
+                    <div id='divGestionTributaria' class="icono fa fa-book">Apoyo en Gestión Tributaria</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-laptop">Asesoría en Ecosistema Electrónico</div>
+                    <div id='divEcosistemaElectronico' class="icono fa fa-laptop">Asesoría en Ecosistema Electrónico</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-calculator">Apoyo en Gestión Contable</div>
+                    <div id='divGestionContable' class="icono fa fa-calculator">Apoyo en Gestión Contable</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-cogs">Apoyo en Procedimiento Organizacional</div>
+                    <div id='divProcedimientoOrganizacional' class="icono fa fa-cogs">Apoyo en Procedimiento Organizacional</div>
                 </a>
             </section>
+
         </section>
+
+        <!--seccion modal-servicios -->
+        <!--modalGeneral queda en blanco en el html -->
+        <div id="modalServicios" class="modal__background-servicios">
+
+            <!--boton cerrar modal  -->
+            <div id="" class=" cerrarModal"><i class="fa-solid fa-xmark"></i></div>
+
+            <!--seccion modal-servicios  -->
+            <div id="modalServiciosContenido" class="modal__content-servicios ">
+                <!---aqui va el contenido del la modal -->
+
+                <aside class="contenedor-servicio">
+                    <h2 id="tituloServicio" class="titulo-servicio"></h2>
+                    <div class="contenedor-texto">
+                        <ul class="lista-servicio">
+                            <!-- <li> aqui se crean los li dinamicos</li>-->
+                        </ul>
+                        <img src="" alt="" class="imagen-servicio">
+                    </div>
+                </aside>
+            </div>
+            <button id="btnContacto" class="btn btn-primary btn__form1  ">Contactar</button>
+        </div>
+
         <!--section divs franjas -->
         <section class="div__franjas">
             <div class="div__franja-1"></div>
@@ -352,7 +378,7 @@
                                 Prestados</span></a></li>
                 </ul>
             </div>
-            
+
             <div>
                 <form action="">
                     <fieldset>
@@ -392,6 +418,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+
+    <!--script JavaScript  -->
+    <script src="../js/nuestros_servicios.js"></script>
 </body>
 
 </html>

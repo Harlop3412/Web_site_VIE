@@ -41,7 +41,7 @@
             }
 
             h3 {
-                font-size:$text-new2;
+                font-size: $text-new2;
             }
         }
 
@@ -74,7 +74,7 @@
 
                 /*clase icon fontawensome nube*/
                 .fa-brands {
-                    font-size:$space-xxxlarge;
+                    font-size: $space-xxxlarge;
                 }
             }
 
@@ -155,7 +155,7 @@
 
             /*clase en cada enlace div da estilos a la fuente*/
             .icono {
-                font-size: $space-ssmall;
+                font-size: $space-xsmall;
                 text-align: justify;
                 padding: $space-ssmall;
             }
@@ -201,7 +201,7 @@
         .section__clientes-galery {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, 1fr);
-            margin:$space-xsmall;
+            margin: $space-xsmall;
             column-gap: $space-xsmall;
         }
 
@@ -214,6 +214,56 @@
             }
         }
     }
+
+    /****************seccion productos ********************/
+    //contenedeor modal principal productos
+    .modal__background {
+
+        //contenedor modal de productos
+        .modal__content {
+
+            width: 35rem;
+            height: 43rem;
+
+            //contenedor general de productos dinamicos
+            .productoFlex {
+                flex-direction: row;
+
+                //clase js
+                .producto__seleccionado {
+
+                    //contenedor indivudual de productos
+                    .cont__producto {
+                        font-size: 1rem;
+                        width: 5rem;
+                        padding: .5rem;
+                        overflow-y: hidden;
+                    }
+                }
+            }
+
+            //titulo de la modal productos
+            .tituloProductoH3 {
+                font-size: 2rem;
+
+            }
+
+        }
+
+        //clase que posiciona el boton comprar de la modal productos
+        .btn__position {
+            top: 5%;
+        }
+
+        //modal-Formulario-productos
+        .modal__content-form {
+            position: relative;
+            top: 45%;
+        }
+    }
+
+
+
 
     /************footer****************/
 
@@ -248,7 +298,7 @@
 }
 
 
-@media screen and (min-width: 401px) and (max-width: 720px) {
+@media screen and (min-width: 401px) and (max-width: 768px) {
 
     /************header****************/
     /*  dejar fijo header a 0% del borde superior del navegador despues de 720*/
@@ -291,7 +341,7 @@
             }
 
             h3 {
-                font-size:$text-new2;
+                font-size: $text-new2;
             }
         }
 
@@ -464,6 +514,53 @@
         }
     }
 
+    /****************seccion productos ********************/
+    //contenedeor modal principal productos
+    .modal__background {
+
+        //contenedor modal de productos
+        .modal__content {
+
+            width: 45rem;
+            height: 43rem;
+
+            //contenedor general de productos dinamicos
+            .productoFlex {
+                flex-direction: row;
+
+                //clase js
+                .producto__seleccionado {
+
+                    //contenedor indivudual de productos
+                    .cont__producto {
+                        font-size: 1rem;
+                        width: 5rem;
+                        padding: .5rem;
+                        overflow-y: hidden;
+                    }
+                }
+            }
+
+            //titulo de la modal productos
+            .tituloProductoH3 {
+                font-size: 2rem;
+            }
+
+        }
+
+        //clase que posiciona el boton comprar de la modal productos
+        .btn__position {
+            top: 5%;
+        }
+
+        //modal-Formulario-productos
+        .modal__content-form {
+            position: relative;
+            top: 42%;
+            width: 40rem;
+        }
+    }
+
     /************footer****************/
     /*zise letra ancho form 720px*/
     .footer__general1 form {
@@ -491,7 +588,7 @@
 
 }
 
-@media screen and (min-width: 721px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
     /************header****************/
     /*  dejar fijo header a 0% del borde superior del navegador hasta 992*/
@@ -562,7 +659,7 @@
             /*div icon nube de fontawensome*/
             .icon__nube {
                 position: relative;
-                bottom:$space-small;
+                bottom: $space-small;
                 left: $space-ssmall;
 
                 /*clase icon fontawensome nube*/
@@ -594,7 +691,7 @@
 
         /*contenedor inicio-historia article scroll inicio-quienes*/
         .section__inicio-3 {
-            height:$space-extend1;
+            height: $space-extend1;
             overflow-y: scroll;
 
             /*p de article con esta clase*/
@@ -707,13 +804,61 @@
         }
     }
 
-    
+
+    /****************seccion productos ********************/
+    //contenedeor modal principal productos
+    .modal__background {
+
+        //contenedor modal de productos
+        .modal__content {
+
+            width: 82rem;
+            height: 43rem;
+
+            //contenedor general de productos dinamicos
+            .productoFlex {
+                flex-direction: row;
+
+                //clase js
+                .producto__seleccionado {
+
+                    //contenedor indivudual de productos
+                    .cont__producto {
+                        font-size: 1.5rem;
+                        width: 8rem;
+                        padding: .5rem;
+                        overflow-y: hidden;
+                    }
+                }
+            }
+
+            //titulo de la modal productos
+            .tituloProductoH3 {
+                font-size: 2rem;
+            }
+
+        }
+
+        //clase que posiciona el boton comprar de la modal productos
+        .btn__position {
+            top: 5%;
+        }
+
+        //modal-Formulario-productos
+        .modal__content-form {
+            position: relative;
+            top: 42%;
+            width: 40rem;
+        }
+    }
+
+
     /************footer****************/
 
     /*padding icono phone y numero despues de form*/
-    .footer__llamanos{
+    .footer__llamanos {
         //clase solo en mediaquieries < 720px
-            padding: 0 $space-xsmall 0 $space-smedium;
+        padding: 0 $space-xsmall 0 $space-smedium;
     }
 
     /*posicion logo footer 991*/
@@ -723,13 +868,96 @@
 
         /*ancho logo*/
         .img__logo-footer {
-            width:$space-xslarge;
+            width: $space-xslarge;
         }
 
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+
+    /************header****************/
+    /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/
+    .header {
+        position: sticky;
+        top: 0%;
+
+        /*ancho de logo en menu ham 991*/
+        .header__navbar-logo {
+            width: $space-logo1;
+        }
+    }
+
+    /********main****************/
+    /****************seccion productos ********************/
+    //contenedeor modal principal productos
+    .modal__background {
+
+        //contenedor modal de productos
+        .modal__content {
+
+            width: 98rem;
+            height: 43rem;
+
+            //contenedor general de productos dinamicos
+            .productoFlex {
+                flex-direction: row;
+
+                //clase js
+                .producto__seleccionado {
+
+                    //contenedor indivudual de productos
+                    .cont__producto {
+                        font-size: 1.5rem;
+                        width: 8rem;
+                        padding: .5rem;
+                        overflow-y: hidden;
+                    }
+                }
+            }
+
+            //titulo de la modal productos
+            .tituloProductoH3 {
+                font-size: 2rem;
+            }
+
+        }
+
+        //clase que posiciona el boton comprar de la modal productos
+        .btn__position {
+            top: 5%;
+        }
+
+        //modal-Formulario-productos
+        .modal__content-form {
+            position: relative;
+            top: 42%;
+            width: 40rem;
+        }
+    }
+
+    /************footer****************/
+    /*footer para que los elementos del mapa corten en <= 992px*/
+    .footer__section-map {
+        flex-wrap: nowrap;
+    }
+
+    //  /*posicion logo footer > 991*/
+    .logo__footer {
+        position: relative;
+        left: 15%;
+
+        /*ancho logo*/
+        .img__logo-footer {
+            width: $space-logo2;
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width: 1301px) {
 
     /************header****************/
     /*  dejar fijo header a 0% del borde superior del navegador despues de 992*/

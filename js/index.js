@@ -74,12 +74,14 @@ function cerrarModal() {
 // Función para agregar eventos a las miniaturas
 function agregarEventosAMiniaturas() {
     const miniaturas = document.querySelectorAll('.inicio__galery img');
+    //id en el header
     const ocultarHeader = document.getElementById('header');
     miniaturas.forEach((miniatura) => {
         miniatura.addEventListener('click', () => {
             // Pasamos la fuente, el texto alternativo y la descripción a la función abrirModal
             abrirModal(miniatura.src, miniatura.alt,);
             console.log(`funcion agregar evento miniatura ${miniatura.src}`);
+            //oculta el header al abrir la modal
             ocultarHeader.style.display = 'none';
             console.log(`oculta header`)
         });

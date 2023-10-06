@@ -1,0 +1,12 @@
+/* animación para modal*/
+@keyframes slideDown {
+    from {
+        transform: translateY(30%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(-50%);
+        opacity: 1;
+      }
+  }
+  // "slideDown" mueve la modal desde una posición inicial fuera de la pantalla (-100%) hasta su posición final (0) utilizando la propiedad transform: translateY(). 

@@ -26,6 +26,8 @@
     <script src="https://kit.fontawesome.com/91007ea3a2.js" crossorigin="anonymous"></script>
     <!--bloque animacion libreria textos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--libreria sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--estilos.css-->
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Nuestros Clientes</title>
@@ -39,7 +41,8 @@
             <div class="">
                 <ul class=" mt-4 list-unstyled ">
                     <li class="list-inline-item ">
-                        <a href="" class=""><i class="fa-brands fa-whatsapp "></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                            class="" target="_blank"><i class="fa-brands fa-whatsapp "></i></a>
                     </li>
                     <li class="list-inline-item">
                         <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -48,7 +51,8 @@
                         <a href=""><i class="fa-brands fa-square-instagram"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a href=""><i class="fa-solid fa-envelopes-bulk"></i></a>
+                        <a href="mailto:visionintegralempresarial2022@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelopes-bulk"></i></a>
                     </li>
                 </ul>
             </div>
@@ -61,9 +65,14 @@
             <!--boton llamame -->
             <div class="">
                 <button type="button" class="btn btn-outline-dark header__section1 ">
-                    <a href="" class=""> <i class="bi bi-telephone icono__phone "></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos" class=""
+                        target="_blank">
+                        <i class="bi bi-telephone icono__phone "></i></a>
                     <!-- clase de libreria iconos de boostrap-->
-                    <p class=""> 310-511-8740</p>
+                    <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                        target="_blank">
+                        <p class=""> 310-511-8740</p>
+                    </a>
                 </button>
             </div>
         </section>
@@ -124,7 +133,7 @@
         <section class="section__clientes">
             <div class="section__clientes-title">
                 <h2 class="animate__animated animate__fadeInUpBig">
-                    <a href="" >
+                    <a href="">
                         Clientes y Aliados Estratégicos
                     </a>
                 </h2>
@@ -197,13 +206,7 @@
                     </div>
                 </a>
             </section>
-            <!-- section inicio-modal CON enlace para cerrar la modal con CSS-->
-            <!-- <div class="modal" id="imagenModal">
-                <div class="modal-content">
-                    <a href="#cerrar" class="cerrar">X</a>
-                    <img src="" alt="Imagen Ampliada">
-                </div>
-            </div>  -->
+
             <!-- section inicio-modal sin enlace-->
             <div class="modal" id="imagenModal">
                 <div class="modal-content ">
@@ -225,7 +228,8 @@
         <section>
             <div class="footer__general1 ">
                 <!--seccion formulario-->
-                <form action="" class="">
+                <form action="https://formsubmit.co/contacto@visionintegralempresarial.com" class="" method="post"
+                    id="formFooterClient">
                     <div class="titulos__form1">
                         <p> ¿Necesitas una <span>asesoría</span> para</p>
                         <p> tu proyecto empresarial? </p>
@@ -242,46 +246,59 @@
                             <!--Caja de nombre y correo-->
                             <div class="row  g-3 ">
                                 <div class="col ">
-                                    <input type="text" class="form-control imput__form1 mb-2 "
-                                        placeholder="Ingresa tu nombre" aria-label="First name">
+                                    <input type="text" name="nombre" class="form-control imput__form1 mb-2 "
+                                        placeholder="¿Como te llamas?**" aria-label="First name" required
+                                        maxlength="80">
                                 </div>
                                 <div class="col">
-                                    <input type="email" class="form-control imput__form1 mb-2"
-                                        placeholder="Ingresa tu correo" id="inputEmail4">
+                                    <input type="email" name="correo" class="form-control imput__form1 mb-2"
+                                        placeholder="¿Cual es tu correo?" id="" maxlength="80">
                                 </div>
                             </div>
 
                             <div class="row  g-3">
                                 <div class="col mt-5 ">
-                                    <input type="text" placeholder="¿Nombre de tu empresa?" value="" name="edad"
-                                        class=" form-control imput__form1">
+                                    <input type="text" placeholder="¿Nombre de tu empresa?" value=""
+                                        name="nombre_empresa" class=" form-control imput__form1" maxlength="80">
                                 </div>
+
+                                <input type="tel" placeholder="¿Número de contacto?**" value="" name="telefono"
+                                    class="col mt-5  form-control imput__form1" maxlength="12" required>
+
                                 <!--menú desplegable-->
-                                <div class="col mt-5">
-                                    <select name="" id="inputState" class="form-select imput__form1">
+                                <div class="mt-5">
+                                    <select name="caso" id="" class="form-select imput__form1">
                                         <option value="">¿Cúal es tu caso?</option>
-                                        <option value="1">Asesoria Empresarial</option>
-                                        <option value="2">Asesoria Tributaria</option>
-                                        <option value="3">Ecosistema Electrónico</option>
-                                        <option value="4">Notificaciones Dian</option>
-                                        <option value="5">Nómina Electrónica </option>
-                                        <option value="6">Factura Electrónica </option>
-                                        <option value="7">Documento Soporte Electrónico </option>
-                                        <option value="8">Otros Documentos Electrónicos </option>
+                                        <option value="Asesoria Empresarial">Asesoria Empresarial</option>
+                                        <option value="Asesoria Tributaria">Asesoria Tributaria</option>
+                                        <option value="Ecosistema Electrónico">Ecosistema Electrónico</option>
+                                        <option value="Notificaciones Dian">Notificaciones Dian</option>
+                                        <option value="Nómina Electrónica">Nómina Electrónica </option>
+                                        <option value="Factura Electrónica">Factura Electrónica </option>
+                                        <option value="Documento Soporte Electrónico">Documento Soporte Electrónico
+                                        </option>
+                                        <option value="Otros Documentos Electrónicos">Otros Documentos Electrónicos
+                                        </option>
                                     </select>
                                 </div>
                             </div>
 
                             <!--text area-->
                             <div class="col mt-5">
-                                <textarea id="exampleFormControlTextarea1 " rows="4" value=""
-                                    placeholder="Cúentame más sobre tu caso"
-                                    class=" form-control imput__form1"></textarea>
+                                <textarea id="" rows="4" value="" placeholder="Cúentame más sobre tu caso"
+                                    class=" form-control imput__form1" name="detalle_caso"></textarea>
                             </div>
+
+                            <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                            <input type='hidden' name='_next'
+                                value="http://127.0.0.1:5500/pages/nuestros_clientes.html">
+
+                            <!--input para quitar el captcha con value 'false'-->
+                            <input type='hidden' name='_captcha' value="false">
+
                             <!--boton-->
-                            <div class="">
-                                <input type="submit" value="Enviar datos" class="btn btn-info btn-lg mt-5 btn__form1">
-                            </div>
+                            <button type="submit" class="btn btn-info btn-lg mt-5 btn__form1" value="">Enviar datos
+                            </button>
                         </fieldset>
                     </div>
                 </form>
@@ -290,7 +307,8 @@
             <div class="footer__phone-grid">
                 <aside class="footer__aside footer__phone-grid-area1 ">
                     <div class="footer__llamanos">
-                        <a href="" class="d-flex justify-content-center">
+                        <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                            class="d-flex justify-content-center" target="_blank">
                             <div>
                                 <p class="bi bi-telephone estilos__icono-phone "></p>
                             </div>
@@ -327,7 +345,8 @@
                 <div>
                     <ul class=" mt-4 list-unstyled footer__section-redes d-flex justify-content-evenly">
                         <li class="list-inline-item">
-                            <a href=""><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                                target="_blank"><i class="bi bi-whatsapp"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -336,7 +355,8 @@
                             <a href=""><i class="bi bi-instagram"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href=""><i class="fa-solid fa-envelopes-bulk"></i></a>
+                            <a href="mailto:visionintegralempresarial2022@gmail.com" target="_blank"><i
+                                    class="fa-solid fa-envelopes-bulk"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -415,8 +435,10 @@
                 </ul>
             </div>
 
-            <div>
-                <form action="">
+            <!--seccion form fotter map-->
+            <div class="form__footer-map">
+                <form action="https://formsubmit.co/contacto@visionintegralempresarial.com" method="post"
+                    id="formFooterMapClient">
                     <fieldset>
                         <legend>
                             <h2> Quiero Información</h2>
@@ -425,22 +447,40 @@
                         <div class="col   ">
                             <div class="col ">
                                 <input type="text" class="form-control footer__section-boletin mb-4 "
-                                    placeholder="Ingresa tu nombre" aria-label="First name">
+                                    placeholder="Ingresa tu nombre **" aria-label="First name" name="nombre"
+                                    maxlength="50" required>
                             </div>
                             <div class="col">
                                 <input type="email" class="form-control footer__section-boletin mb-4"
-                                    placeholder="Ingresa tu correo" id="inputEmail4">
+                                    placeholder="Correo electrónico" id="" name="correo" maxlength="50">
                             </div>
+                            <div class="col">
+                                <input type="tel" class="form-control footer__section-boletin mb-4"
+                                    placeholder="Número de contacto **" id="" name="telefono" required maxlength="12">
+                            </div>
+                            <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                            <input type='hidden' name='_next'
+                                value="http://127.0.0.1:5500/pages/Nuestros_clientes.html#formFooterMapClient">
+
+                            <!--input para quitar el captcha con value 'false'-->
+                            <input type='hidden' name='_captcha' value="false">
+
                         </div>
                         <!--boton-->
                         <div class="">
-                            <button type="submit" value="Suscribir"
+                            <button type="submit" value=""
                                 class="btn btn-primary btn-lg mt-2 footer__section-boletin">Solicitar</button>
 
                         </div>
                     </fieldset>
                 </form>
+                <!--link correo-->
+                <div class="contacto__correo">
+                    <a href="mailto:contacto@visionintegralempresarial.com"
+                        target="_blank">contacto@visionintegralempresarial.com</a>
+                </div>
             </div>
+
         </section>
         <aside>
             <div class="footer__aside-copy">
@@ -456,6 +496,8 @@
         crossorigin="anonymous"></script>
 
     <script src="../js/index.js"></script>
+    <script src="../js/nuestros_clientes.js"></script>
+
 </body>
 
 </html>

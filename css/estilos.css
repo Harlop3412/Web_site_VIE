@@ -29,8 +29,7 @@ html {
 /*z-index mayor pasa por delante del logo footer*/
 .header {
   position: relative;
-  z-index: 50;
-  display: none; }
+  z-index: 50; }
 
 /*estilos del flex */
 .header__section1 {
@@ -242,7 +241,8 @@ html {
   /*tamaño de letras footer-map*/
   /*estilos form-boletin*/
   /*color, sepatracion letra map*/
-  /*hover enlances (letras)map*/ }
+  /*hover enlances (letras)map*/
+  /*estilos form del map*/ }
   .footer__section-map .footer__section-redes a {
     text-align: center; }
   .footer__section-map .footer__section-redes i {
@@ -271,6 +271,18 @@ html {
     font-weight: 500; }
   .footer__section-map .footer__spam-letra:hover {
     color: #042ebe; }
+  .footer__section-map .form__footer-map {
+    margin-right: 2rem; }
+
+/*div enlace correo*/
+.contacto__correo {
+  margin: 2rem 1rem 0 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); }
+  .contacto__correo a {
+    color: #042ebe; }
+  .contacto__correo a:hover {
+    color: #9696ff; }
 
 /*seccion aside-copyrigt footer*/
 .footer__aside-copy {
@@ -393,38 +405,15 @@ html {
     grid-template-rows: repeat(3, 1fr);
     column-gap: 5rem;
     row-gap: 3rem;
-    /*clase en cada enlace div da estilos a la fuente*/
-    /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
-    /*nota: metodo para usar el content con los iconos, no se necesita porque la clase da icono en html
-        .icono.fa-briefcase::before {
-            content: "\f0ec";
-        }
-
-        .icono.fa-users::before {
-            content: "\f0c0";
-        }
-
-        .icono.fa-file::before {
-            content: "\f15b";
-        }
-
-        .icono.fa-laptop::before {
-            content: "\f109";
-        }
-
-        .icono.fa-calculator::before {
-            content: "\f1ec";
-        }
-
-        .icono.fa-cogs::before {
-            content: "\f085";
-        } */ }
-    .inicio__servicios .section__iconos .icono {
+    /*clase en cada enlace div da estilos a la fuente en esta seccion esta clase es para la seccion servicios*/
+    /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
+    .inicio__servicios .section__iconos .icono, .inicio__servicios .section__iconos .iconoServicioJs {
       font-size: 2rem;
-      color: black; }
-    .inicio__servicios .section__iconos .icono:hover {
+      color: black;
+      cursor: pointer; }
+    .inicio__servicios .section__iconos .icono:hover, .inicio__servicios .section__iconos .iconoServicioJs:hover {
       color: #042ebe; }
-    .inicio__servicios .section__iconos .icono::before {
+    .inicio__servicios .section__iconos .icono::before, .inicio__servicios .section__iconos .iconoServicioJs::before {
       font-size: 2.4rem;
       margin-right: 1rem;
       font-family: FontAwesome; }
@@ -545,8 +534,17 @@ html {
       max-width: 100%;
       padding: 4rem 2rem; }
 
+/*clase para darle display none a la modal */
+.modalDisplay {
+  display: none; }
+
 /* Estilos para la modal de fondo */
 .modal__background-servicios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   position: fixed;
   top: 0;
   left: 0;
@@ -554,11 +552,6 @@ html {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-evenly;
   /* Estilos para la modal de contenido */ }
   .modal__background-servicios .modal__content-servicios {
     background-color: #e8eded;
@@ -693,7 +686,8 @@ html {
   .modal__background .modal__content-form {
     top: 50%;
     width: 40rem;
-    max-height: 100%; }
+    max-height: 100%;
+    background-color: rgba(4, 46, 190, 0.7); }
 
 /*******clase js para dejar prductos selecionados al hacer clic No indentar este bloque*/
 .producto__seleccionado {
@@ -711,7 +705,6 @@ html {
 .form__productos {
   padding: 0 1rem 2rem 1rem;
   color: white;
-  background-color: rgba(4, 46, 190, 0.7);
   width: 100%;
   height: 100%;
   border-radius: 1%;
@@ -865,11 +858,11 @@ html {
       row-gap: 2rem;
       /*clase en cada enlace div da estilos a la fuente*/
       /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
-      .inicio__servicios .section__iconos .icono {
+      .inicio__servicios .section__iconos .icono, .inicio__servicios .section__iconos .iconoServicioJs {
         font-size: 1rem;
         text-align: justify;
         padding: 1.5rem; }
-      .inicio__servicios .section__iconos .icono::before {
+      .inicio__servicios .section__iconos .icono::before, .inicio__servicios .section__iconos .iconoServicioJs::before {
         font-size: 2rem; }
     .inicio__servicios div {
       padding: 1rem;
@@ -898,6 +891,32 @@ html {
       /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
       .section__clientes .modal .modal-content {
         width: 32rem; }
+  /*modal inicio - servicios*/
+  /* Estilos para la modal de fondo */
+  .modal__background-servicios {
+    /* Estilos para la modal de contenido */ }
+    .modal__background-servicios .modal__content-servicios {
+      width: 35rem;
+      height: 40rem;
+      flex-direction: column;
+      /*estilos del contenido de la modal*/
+      /*contenedor general aside-contenido-modal*/ }
+      .modal__background-servicios .modal__content-servicios .contenedor-servicio {
+        padding: 1rem;
+        /*titulo de la modal*/
+        /*contenedor ul-img*/ }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .titulo-servicio {
+          font-size: 1.5rem; }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto {
+          flex-direction: column-reverse;
+          /*clase en img-servicio*/
+          /*clase del ul*/ }
+          .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .imagen-servicio {
+            position: relative;
+            top: 0%;
+            left: 30%; }
+          .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .lista-servicio {
+            font-size: 1.2rem; }
   /****************seccion productos ********************/
   .modal__background .modal__content, .modal__background .modal__content-form {
     width: 35rem;
@@ -932,7 +951,11 @@ html {
     left: 15%;
     /*ancho logo*/ }
     .logo__footer .img__logo-footer {
-      width: 150px; } }
+      width: 150px; }
+  /*correo footer*/
+  .contacto__correo {
+    font-size: 1.7rem;
+    margin-right: 0rem; } }
 
 @media screen and (min-width: 401px) and (max-width: 768px) {
   /************header****************/
@@ -1035,11 +1058,11 @@ html {
       row-gap: 2rem;
       /*clase en cada enlace div da estilos a la fuente*/
       /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
-      .inicio__servicios .section__iconos .icono {
+      .inicio__servicios .section__iconos .icono, .inicio__servicios .section__iconos .iconoServicioJs {
         font-size: 1.5rem;
         text-align: justify;
         padding: 1.5rem; }
-      .inicio__servicios .section__iconos .icono::before {
+      .inicio__servicios .section__iconos .icono::before, .inicio__servicios .section__iconos .iconoServicioJs::before {
         font-size: 2rem; }
     .inicio__servicios div {
       padding: 1rem;
@@ -1068,6 +1091,32 @@ html {
       /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
       .section__clientes .modal .modal-content {
         width: 40rem; }
+  /*modal inicio - servicios*/
+  /* Estilos para la modal de fondo */
+  .modal__background-servicios {
+    /* Estilos para la modal de contenido */ }
+    .modal__background-servicios .modal__content-servicios {
+      width: 45rem;
+      height: 42rem;
+      flex-direction: column;
+      /*estilos del contenido de la modal*/
+      /*contenedor general aside-contenido-modal*/ }
+      .modal__background-servicios .modal__content-servicios .contenedor-servicio {
+        padding: 1rem;
+        /*titulo de la modal*/
+        /*contenedor ul-img*/ }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .titulo-servicio {
+          font-size: 1.8rem; }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto {
+          flex-direction: column-reverse;
+          /*clase en img-servicio*/
+          /*clase del ul*/ }
+          .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .imagen-servicio {
+            position: relative;
+            top: 0%;
+            left: 30%; }
+          .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .lista-servicio {
+            font-size: 1.2rem; }
   /****************seccion productos ********************/
   .modal__background .modal__content, .modal__background .modal__content-form {
     width: 45rem;
@@ -1204,11 +1253,11 @@ html {
       row-gap: 2rem;
       /*clase en cada enlace div da estilos a la fuente*/
       /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/ }
-      .inicio__servicios .section__iconos .icono {
+      .inicio__servicios .section__iconos .icono, .inicio__servicios .section__iconos .iconoServicioJs {
         font-size: 1.5rem;
         text-align: justify;
         padding: 1.5rem; }
-      .inicio__servicios .section__iconos .icono::before {
+      .inicio__servicios .section__iconos .icono::before, .inicio__servicios .section__iconos .iconoServicioJs::before {
         font-size: 2rem; }
     .inicio__servicios div {
       padding: 1rem;
@@ -1237,6 +1286,32 @@ html {
       /*sub contenedor de la modal tamaño contenedor que contiene  la img*/ }
       .section__clientes .modal .modal-content {
         width: 55rem; }
+  /*modal inicio - servicios*/
+  /* Estilos para la modal de fondo */
+  .modal__background-servicios {
+    /* Estilos para la modal de contenido */ }
+    .modal__background-servicios .modal__content-servicios {
+      width: 80rem;
+      height: 42rem;
+      flex-direction: column;
+      /*estilos del contenido de la modal*/
+      /*contenedor general aside-contenido-modal*/ }
+      .modal__background-servicios .modal__content-servicios .contenedor-servicio {
+        padding: 1rem;
+        /*titulo de la modal*/
+        /*contenedor ul-img*/ }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .titulo-servicio {
+          font-size: 2.2rem; }
+        .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto {
+          flex-direction: column-reverse;
+          /*clase en img-servicio*/
+          /*clase del ul*/ }
+          .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .imagen-servicio {
+            position: relative;
+            top: 0%;
+            left: 30%; }
+          .modal__background-servicios .modal__content-servicios .contenedor-servicio .contenedor-texto .lista-servicio {
+            font-size: 1.5rem; }
   /****************seccion productos ********************/
   .modal__background .modal__content, .modal__background .modal__content-form {
     width: 82rem;

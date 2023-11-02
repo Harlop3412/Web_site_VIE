@@ -88,7 +88,7 @@
         top: 50%;
         width: 40rem;
         max-height: 100%;
-        
+        background-color:$col-form;
     }
 
 }
@@ -111,7 +111,7 @@
 .form__productos {
     padding: 0 $space-xsmall $space-small $space-xsmall;
     color: $col-secondary;
-    background-color: $col-form;
+    // background-color: $col-form;
     width: 100%;
     height: 100%;
     border-radius: 1%;

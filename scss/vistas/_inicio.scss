@@ -117,14 +117,20 @@
         column-gap: $space-slarge;
         row-gap: $space-smedium;
 
-        /*clase en cada enlace div da estilos a la fuente*/
+        /*clase en cada enlace div da estilos a la fuente en esta seccion esta clase es para la seccion servicios*/
         .icono {
             font-size: $space-small;
             color: $col-alternate;
+            cursor: pointer;
         }
 
         .icono:hover {
             color: $col-primary;
+        }
+
+         //esta clase es para evitar que se active el evento de la modal-productos al dar click en servicios, clase solo está en index-incio 
+        .iconoServicioJs{
+            @extend.icono;
         }
 
         /*se necesita  darle font-family de fontawensome para que se reconozca el unicode en el content, la clase icono da estilos al pseudoelemento before que es el icono que se muestra antes de la letra*/
@@ -134,30 +140,6 @@
             font-family: FontAwesome;
         }
 
-        /*nota: metodo para usar el content con los iconos, no se necesita porque la clase da icono en html
-        .icono.fa-briefcase::before {
-            content: "\f0ec";
-        }
-
-        .icono.fa-users::before {
-            content: "\f0c0";
-        }
-
-        .icono.fa-file::before {
-            content: "\f15b";
-        }
-
-        .icono.fa-laptop::before {
-            content: "\f109";
-        }
-
-        .icono.fa-calculator::before {
-            content: "\f1ec";
-        }
-
-        .icono.fa-cogs::before {
-            content: "\f085";
-        } */
     }
 
     /*estilos delos div de  iconos*/

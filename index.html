@@ -26,6 +26,8 @@
     <script src="https://kit.fontawesome.com/91007ea3a2.js" crossorigin="anonymous"></script>
     <!--libreria textos animate.style-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--libreria sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--estilos.css-->
     <link rel="stylesheet" href="css/estilos.css">
     <title>Inicio</title>
@@ -39,7 +41,8 @@
             <div class="">
                 <ul class=" mt-4 list-unstyled ">
                     <li class="list-inline-item ">
-                        <a href="" class=""><i class="fa-brands fa-whatsapp "></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                            target="_blank" class=""><i class="fa-brands fa-whatsapp "></i></a>
                     </li>
                     <li class="list-inline-item">
                         <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -48,7 +51,8 @@
                         <a href=""><i class="fa-brands fa-square-instagram"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a href=""><i class="fa-solid fa-envelopes-bulk"></i></a>
+                        <a href="mailto:visionintegralempresarial2022@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelopes-bulk"></i></a>
                     </li>
                 </ul>
             </div>
@@ -61,9 +65,12 @@
             <!--boton llamame -->
             <div class="">
                 <button type="button" class="btn btn-outline-dark header__section1 ">
-                    <a href="" class=""> <i class="bi bi-telephone icono__phone "></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos" class="" target="_blank">
+                        <i class="bi bi-telephone icono__phone "></i></a>
                     <!-- clase de libreria iconos de boostrap-->
-                    <p class=""> 310-511-8740</p>
+                    <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos" target="_blank">
+                        <p class=""> 310-511-8740</p>
+                    </a>
                 </button>
             </div>
         </section>
@@ -119,8 +126,10 @@
         <section class="main__section1 ">
             <article class="">
                 <h1 class="animate__animated animate__fadeInDownBig">Visión Integral Empresarial SAS</h1>
-                <h2 class="animate__animated animate__fadeInDownBig">Asesoría en Gestión Empresarial y Ecosistema Electrónico</h2>
-                <h3 class="animate__animated animate__fadeInDownBig">Encuentra con nostros, facturación, nómina, y demás documentos electrónicos </h3>
+                <h2 class="animate__animated animate__fadeInDownBig">Asesoría en Gestión Empresarial y Ecosistema
+                    Electrónico</h2>
+                <h3 class="animate__animated animate__fadeInDownBig">Encuentra con nostros, facturación, nómina, y demás
+                    documentos electrónicos </h3>
             </article>
 
             <aside class="section__icon ">
@@ -221,25 +230,58 @@
             <section class="section__iconos">
                 <!--libreria fontawnsome-->
                 <a href="">
-                    <div class="icono fa fa-briefcase">Asesoría en Gestión Empresarial</div>
+                    <div id='divGestionEmpresarial' class=" iconoServicioJs fa fa-briefcase">Asesoría en Gestión
+                        Empresarial</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-users">Apoyo en Gestión de Talento Humano</div>
+                    <div id='divGestionTalentoHumano' class=" iconoServicioJs fa fa-users">Apoyo en Gestión de Talento
+                        Humano</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-book">Apoyo en Gestión Tributaria</div>
+                    <div id='divGestionTributaria' class=" iconoServicioJs fa fa-book">Apoyo en Gestión Tributaria</div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-laptop">Asesoría en Ecosistema Electrónico</div>
+                    <div id='divEcosistemaElectronico' class=" iconoServicioJs fa fa-laptop">Asesoría en Ecosistema
+                        Electrónico
+                    </div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-calculator">Apoyo en Gestión Contable</div>
+                    <div id='divGestionContable' class=" iconoServicioJs fa fa-calculator">Apoyo en Gestión Contable
+                    </div>
                 </a>
                 <a href="">
-                    <div class="icono fa fa-cogs">Apoyo en Procedimiento Organizacional</div>
+                    <div id='divProcedimientoOrganizacional' class=" iconoServicioJs fa fa-cogs">Apoyo en Procedimiento
+                        Organizacional</div>
                 </a>
             </section>
         </section>
+
+        <!--------------seccion modal-servicios ------>
+        <!--modalGeneral queda en blanco en el html -->
+        <div class="modalDisplay" id="modalServicios">
+            <div id="" class="modal__background-servicios ">
+
+                <!--boton cerrar modal  -->
+                <div id="" class=" cerrarModal"><i class="fa-solid fa-xmark"></i></div>
+
+                <!--seccion modal-servicios  -->
+                <div id="modalServiciosContenido" class="modal__content-servicios ">
+                    <!---aqui va el contenido del la modal -->
+
+                    <aside class="contenedor-servicio">
+                        <h2 id="tituloServicio" class="titulo-servicio"></h2>
+                        <div class="contenedor-texto">
+                            <ul class="lista-servicio">
+                                <!-- <li> aqui se crean los li dinamicos</li>-->
+                            </ul>
+                            <img src="" alt="" class="imagen-servicio">
+                        </div>
+                    </aside>
+                </div>
+                <button id="btnContacto" class="btn btn-primary btn__form1  ">Contactar</button>
+            </div>
+        </div>
+
         <!--section divs franjas -->
         <section class="div__franjas">
             <div class="div__franja-1"></div>
@@ -255,26 +297,106 @@
             </a>
             <section class="section__iconos">
                 <!--libreria fontawnsome-->
-                <a href="">
-                    <div class="icono fa-solid fa-print">Folios de Emisión de Factura Electrónica</div>
+
+                <div class="icono fa-solid fa-print" id="idFacturaElectronica">Folios de Emisión de Factura Electrónica
+                </div>
+
+                <div class="icono fa-solid fa-folder" id="idNominaElectronica">Folios de Emisión de Nómina Electrónica
+                </div>
+
+                <div class="icono fa-solid fa-file-import" id="idImplementaciones">Implementaciones y acompañamientos
+                </div>
+
+                <div class="icono fa-solid fa-file-signature" id="idDocumentoSoporte">Documento Soporte Electrónico
+                </div>
                 </a>
-                <a href="">
-                    <div class="icono fa-solid fa-folder">Folios de Emisión de Nómina Electrónica</div>
-                </a>
-                <a href="">
-                    <div class="icono fa-solid fa-file-import">Implementaciones y acompañamientos</div>
-                </a>
-                <div class="icono fa-solid fa-file-signature">Documento Soporte Electrónico</div>
-                </a>
-                <a href="">
-                    <div class="icono fa fa-file-code">Fix, gestión empresarial</div>
-                </a>
-                <a href="">
-                    <div class="icono fa fa-folder-open">Buzón Tributario</div>
-                </a>
+
+                <div class="icono fa fa-file-code" id="idLicenciasFix">Fix, gestión empresarial</div>
+
+                <div class="icono fa fa-folder-open" id="idBuzonTtributario">Buzón Tributario</div>
+
             </section>
 
         </section>
+
+        <!--seccion modal-productos -->
+        <!--modalGeneral queda en blanco en el html -->
+        <div id="modalGeneral" class="modal__background">
+
+            <!--boton cerrar modal  -->
+            <div id="" class=" cerrarModal"><i class="fa-solid fa-xmark"></i></div>
+
+            <!--seccion modal-productos  -->
+            <div id="" class="modal__content ">
+
+                <div id="nombreProducto" class="tituloProductoH3">
+                    <!--codigo desde para nombreProductos-->
+                </div>
+
+                <div class="" id="divProductos">
+                    <!--codigo desde js  para mostrar los productos  -->
+                </div>
+
+            </div>
+            <button id="btnComprar" class="btn btn-primary btn__form1 btn__position ">Comprar</button>
+        </div>
+
+
+        <!---------modal form de servicios-productos ------->
+        <div id="modalForm" class="modal__background">
+
+            <!--boton cerrar modal  -->
+            <div id="closeModalForm" class=" cerrarModal"><i class="fa-solid fa-xmark"></i></div>
+
+            <!--contenedor del form  -->
+            <div id="" class="modal__content-form ">
+                <!--section form contacto producto -->
+                <form id="formProductoServicio" action="https://formsubmit.co/contacto@visionintegralempresarial.com" class="form__productos"
+                    method="post">
+                    <fieldset class="">
+                        <legend>Ingresa los datos para comunicarnos contigo</legend>
+                        <!--nombre-->
+                        <div class="col ">
+                            <label for="">Ingresa tu nombre</label>
+                            <input type="text" class="form-control  mb-2 FormProductos" placeholder="Nombre **"
+                                aria-label="First name" required name="nombre" maxlength="30">
+                        </div>
+                        <!--num contacto-->
+                        <div class="col ">
+                            <label for="">Ingresa tu número de contacto</label>
+                            <input type="tel" class="form-control  mb-2 FormProductos" placeholder="Número contacto **"
+                                aria-label="First name" required name="contacto" maxlength="12" >
+                        </div>
+                        <!--correo-->
+                        <div class="col ">
+                            <label for="">Ingresa tu correo electrónico</label>
+                            <input type="email" class="form-control  mb-2 FormProductos" placeholder=" E-mail"
+                                aria-label="First name" name="correo" maxlength="30">
+                        </div>
+                        <!--text area-->
+                        <div class="col mt-4">
+                            <textarea id="" rows="4" value=""
+                                placeholder="Cúentanos más sobre tu caso o tu empresa..."
+                                class=" FormProductos form-control " name="caso"></textarea>
+                        </div>
+
+                        <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                        <input type='hidden' name='_next' value="http://127.0.0.1:5500/index.html">
+
+                        <!--input para quitar el captcha con value 'false'-->
+                        <input type='hidden' name='_captcha' value="false">
+
+                    </fieldset>
+                    <!--boton-->
+                    <div class="">
+                        <button type="submit" value="" class="btn btn-info btn-lg mt-5 btn__form1">Enviar datos
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
         <!--section divs franjas -->
         <section class="div__franjas">
             <div class="div__franja-1"></div>
@@ -358,14 +480,7 @@
                     </div>
                 </a>
             </section>
-            <!-- section inicio-modal CON enlace para cerrar la modal con CSS-->
-            <!-- <div class="modal" id="imagenModal">
-                <div class="modal-content">
-                    <a href="#cerrar" class="cerrar">X</a>
-                    <img src="" alt="Imagen Ampliada">
-                </div>
-            </div>  -->
-            <!-- section inicio-modal sin enlace-->
+
             <div class="modal" id="imagenModal">
                 <div class="modal-content ">
                     <img src="" alt="Imagen Ampliada" class="">
@@ -386,7 +501,8 @@
         <section>
             <div class="footer__general1 ">
                 <!--seccion formulario-->
-                <form action="" class="">
+                <form action="https://formsubmit.co/contacto@visionintegralempresarial.com" class="" method="post"
+                    id="formFooter">
                     <div class="titulos__form1">
                         <p> ¿Necesitas una <span>asesoría</span> para</p>
                         <p> tu proyecto empresarial? </p>
@@ -403,32 +519,39 @@
                             <!--Caja de nombre y correo-->
                             <div class="row  g-3 ">
                                 <div class="col ">
-                                    <input type="text" class="form-control imput__form1 mb-2 "
-                                        placeholder="Ingresa tu nombre" aria-label="First name">
+                                    <input type="text" name="nombre" class="form-control imput__form1 mb-2 "
+                                        placeholder="¿Como te llamas?**" aria-label="First name" required
+                                        maxlength="80">
                                 </div>
                                 <div class="col">
-                                    <input type="email" class="form-control imput__form1 mb-2"
-                                        placeholder="Ingresa tu correo" id="inputEmail4">
+                                    <input type="email" name="correo" class="form-control imput__form1 mb-2"
+                                        placeholder="¿Cual es tu correo?" id="" maxlength="80">
                                 </div>
                             </div>
 
                             <div class="row  g-3">
                                 <div class="col mt-5 ">
-                                    <input type="text" placeholder="¿Nombre de tu empresa?" value="" name="edad"
-                                        class=" form-control imput__form1">
+                                    <input type="text" placeholder="¿Nombre de tu empresa?" value=""
+                                        name="nombre_empresa" class=" form-control imput__form1" maxlength="80">
                                 </div>
+
+                                <input type="tel" placeholder="¿Número de contacto?**" value="" name="telefono"
+                                    class="col mt-5  form-control imput__form1" maxlength="12" required>
+
                                 <!--menú desplegable-->
-                                <div class="col mt-5">
-                                    <select name="" id="inputState" class="form-select imput__form1">
+                                <div class="mt-5">
+                                    <select name="caso" id="" class="form-select imput__form1">
                                         <option value="">¿Cúal es tu caso?</option>
-                                        <option value="1">Asesoria Empresarial</option>
-                                        <option value="2">Asesoria Tributaria</option>
-                                        <option value="3">Ecosistema Electrónico</option>
-                                        <option value="4">Notificaciones Dian</option>
-                                        <option value="5">Nómina Electrónica </option>
-                                        <option value="6">Factura Electrónica </option>
-                                        <option value="7">Documento Soporte Electrónico </option>
-                                        <option value="8">Otros Documentos Electrónicos </option>
+                                        <option value="Asesoria Empresarial">Asesoria Empresarial</option>
+                                        <option value="Asesoria Tributaria">Asesoria Tributaria</option>
+                                        <option value="Ecosistema Electrónico">Ecosistema Electrónico</option>
+                                        <option value="Notificaciones Dian">Notificaciones Dian</option>
+                                        <option value="Nómina Electrónica">Nómina Electrónica </option>
+                                        <option value="Factura Electrónica">Factura Electrónica </option>
+                                        <option value="Documento Soporte Electrónico">Documento Soporte Electrónico
+                                        </option>
+                                        <option value="Otros Documentos Electrónicos">Otros Documentos Electrónicos
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -436,13 +559,19 @@
                             <!--text area-->
                             <div class="col mt-5">
                                 <textarea id="exampleFormControlTextarea1 " rows="4" value=""
-                                    placeholder="Cúentame más sobre tu caso"
-                                    class=" form-control imput__form1"></textarea>
+                                    placeholder="Cúentame más sobre tu caso" class=" form-control imput__form1"
+                                    name="detalle_caso"></textarea>
                             </div>
+
+                            <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                            <input type='hidden' name='_next' value="http://127.0.0.1:5500/index.html#formFooter">
+
+                            <!--input para quitar el captcha con value 'false'-->
+                            <input type='hidden' name='_captcha' value="false">
+
                             <!--boton-->
-                            <div class="">
-                                <input type="submit" value="Enviar datos" class="btn btn-info btn-lg mt-5 btn__form1">
-                            </div>
+                            <button type="submit" class="btn btn-info btn-lg mt-5 btn__form1" value="">Enviar datos
+                            </button>
                         </fieldset>
                     </div>
                 </form>
@@ -451,7 +580,8 @@
             <div class="footer__phone-grid">
                 <aside class="footer__aside footer__phone-grid-area1 ">
                     <div class="footer__llamanos">
-                        <a href="" class="d-flex justify-content-center">
+                        <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                            target="_blank" class="d-flex justify-content-center">
                             <div>
                                 <p class="bi bi-telephone estilos__icono-phone "></p>
                             </div>
@@ -488,7 +618,8 @@
                 <div>
                     <ul class=" mt-4 list-unstyled footer__section-redes d-flex justify-content-evenly">
                         <li class="list-inline-item">
-                            <a href=""><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=573105118740&text=Hola, quiero contactarlos"
+                                target="_blank"><i class="bi bi-whatsapp"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -497,7 +628,7 @@
                             <a href=""><i class="bi bi-instagram"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href=""><i class="fa-solid fa-envelopes-bulk"></i></a>
+                            <a href="./pages/contacto.html"><i class="fa-solid fa-envelopes-bulk"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -576,8 +707,9 @@
                 </ul>
             </div>
 
-            <div>
-                <form action="">
+            <div class="form__footer-map">
+                <form action="https://formsubmit.co/contacto@visionintegralempresarial.com" method="post"
+                    id="formFooterMap">
                     <fieldset>
                         <legend>
                             <h2> Quiero Información</h2>
@@ -586,23 +718,40 @@
                         <div class="col   ">
                             <div class="col ">
                                 <input type="text" class="form-control footer__section-boletin mb-4 "
-                                    placeholder="Ingresa tu nombre" aria-label="First name">
+                                    placeholder="Ingresa tu nombre **" aria-label="First name" name="nombre"
+                                    maxlength="50" required>
                             </div>
                             <div class="col">
                                 <input type="email" class="form-control footer__section-boletin mb-4"
-                                    placeholder="Ingresa tu correo" id="inputEmail4">
+                                    placeholder="Correo electrónico" id="" name="correo" maxlength="50">
                             </div>
+                            <div class="col">
+                                <input type="tel" class="form-control footer__section-boletin mb-4"
+                                    placeholder="Número de contacto **" id="" name="telefono" required maxlength="12">
+                            </div>
+                            <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                            <input type='hidden' name='_next' value="http://127.0.0.1:5500/index.html#formFooterMap">
+
+                            <!--input para quitar el captcha con value 'false'-->
+                            <input type='hidden' name='_captcha' value="false">
+
                         </div>
                         <!--boton-->
                         <div class="">
-                            <button type="submit" value="Suscribir"
+                            <button type="submit" value=""
                                 class="btn btn-primary btn-lg mt-2 footer__section-boletin">Solicitar</button>
 
                         </div>
                     </fieldset>
                 </form>
+                <!--link correo-->
+                <div class="contacto__correo">
+                    <a href="mailto:contacto@visionintegralempresarial.com"
+                        target="_blank">contacto@visionintegralempresarial.com</a>
+                </div>
             </div>
         </section>
+
         <aside>
             <div class="footer__aside-copy">
                 <i class="fa-solid fa-copyright"></i>Visión Integral Empresarial SAS, 2023. Todos los derechos

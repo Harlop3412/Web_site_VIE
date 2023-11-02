@@ -1,6 +1,15 @@
+/*clase para darle display none a la modal */
+.modalDisplay{
+    display: none;
+}// se hizo asi separado para poder darle display flex y none al mismo elmento
+
 /* Estilos para la modal de fondo */
 .modal__background-servicios {
-    // display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: fixed;
     top: 0;
     left: 0;
@@ -8,11 +17,7 @@
     height: 100%;
     background: $background-modal;
     z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+
 
     /* Estilos para la modal de contenido */
     .modal__content-servicios {

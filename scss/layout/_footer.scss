@@ -150,6 +150,24 @@
         color: $col-primary;
     }
 
+    /*estilos form del map*/
+    .form__footer-map{
+        margin-right: $space-small;
+    }
+}
+
+/*div enlace correo*/
+.contacto__correo{
+    margin: $space-small $space-xsmall 0 0; 
+    font-size: $space-small;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+    a{
+        color: $col-primary;
+    }
+    a:hover{
+        color: $col-extra;
+    }
 }
 
 /*seccion aside-copyrigt footer*/
@@ -159,3 +177,4 @@
     text-align: end;
     padding: $space-xsmall;
 }
+

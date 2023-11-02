@@ -215,6 +215,50 @@
         }
     }
 
+    /*modal inicio - servicios*/
+
+    /* Estilos para la modal de fondo */
+    .modal__background-servicios {
+
+        /* Estilos para la modal de contenido */
+        .modal__content-servicios {
+            width: 35rem;
+            height: 40rem;
+            flex-direction: column;
+
+            /*estilos del contenido de la modal*/
+            /*contenedor general aside-contenido-modal*/
+            .contenedor-servicio {
+                padding: 1rem;
+
+                /*titulo de la modal*/
+                .titulo-servicio {
+                    font-size: 1.5rem;
+                }
+
+                /*contenedor ul-img*/
+                .contenedor-texto {
+                    flex-direction: column-reverse;
+
+                    /*clase en img-servicio*/
+                    .imagen-servicio {
+                        position: relative;
+                        top: 0%;
+                        left: 30%;
+                    }
+
+                    /*clase del ul*/
+                    .lista-servicio {
+                        // list-style-type: none;
+                        font-size: 1.2rem;
+                    }
+
+                }
+            }
+        }
+    }
+
+
     /****************seccion productos ********************/
     //contenedeor modal principal productos
     .modal__background {
@@ -293,6 +337,12 @@
             width: $space-logo4;
         }
 
+    }
+
+    /*correo footer*/
+    .contacto__correo {
+        font-size: 1.7rem;
+        margin-right: 0rem;
     }
 
 }
@@ -513,6 +563,49 @@
             }
         }
     }
+
+    /*modal inicio - servicios*/
+    /* Estilos para la modal de fondo */
+    .modal__background-servicios {
+
+        /* Estilos para la modal de contenido */
+        .modal__content-servicios {
+            width: 45rem;
+            height: 42rem;
+            flex-direction: column;
+
+            /*estilos del contenido de la modal*/
+            /*contenedor general aside-contenido-modal*/
+            .contenedor-servicio {
+                padding: 1rem;
+
+                /*titulo de la modal*/
+                .titulo-servicio {
+                    font-size: 1.8rem;
+                }
+
+                /*contenedor ul-img*/
+                .contenedor-texto {
+                    flex-direction: column-reverse;
+
+                    /*clase en img-servicio*/
+                    .imagen-servicio {
+                        position: relative;
+                        top: 0%;
+                        left: 30%;
+                    }
+
+                    /*clase del ul*/
+                    .lista-servicio {
+                        // list-style-type: none;
+                        font-size: 1.2rem;
+                    }
+
+                }
+            }
+        }
+    }
+
 
     /****************seccion productos ********************/
     //contenedeor modal principal productos
@@ -800,6 +893,48 @@
             /*sub contenedor de la modal tamaño contenedor que contiene  la img*/
             .modal-content {
                 width: $space-xx-large;
+            }
+        }
+    }
+
+    /*modal inicio - servicios*/
+    /* Estilos para la modal de fondo */
+    .modal__background-servicios {
+
+        /* Estilos para la modal de contenido */
+        .modal__content-servicios {
+            width: 80rem;
+            height: 42rem;
+            flex-direction: column;
+
+            /*estilos del contenido de la modal*/
+            /*contenedor general aside-contenido-modal*/
+            .contenedor-servicio {
+                padding: 1rem;
+
+                /*titulo de la modal*/
+                .titulo-servicio {
+                    font-size: 2.2rem;
+                }
+
+                /*contenedor ul-img*/
+                .contenedor-texto {
+                    flex-direction: column-reverse;
+
+                    /*clase en img-servicio*/
+                    .imagen-servicio {
+                        position: relative;
+                        top: 0%;
+                        left: 30%;
+                    }
+
+                    /*clase del ul*/
+                    .lista-servicio {
+                        // list-style-type: none;
+                        font-size: 1.5rem;
+                    }
+
+                }
             }
         }
     }

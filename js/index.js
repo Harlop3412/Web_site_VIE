@@ -479,13 +479,13 @@ const asesoriaTributaria = [
 ];
 console.log(`cantidad servicios asesorias tributarias: ${asesoriaTributaria.length}`);
 //variable de ruta img
-const imgServicioTributario = '../multimedia/nuestros_servicios/gestion_tributaria.jpg';
+const imgServicioTributario = './multimedia/nuestros_servicios/gestion_tributaria.jpg';
 //instanciar objeto con clase Servicio
 const gestionTributaria = new Servicio(tituloServicioTrabutario, asesoriaTributaria, imgServicioTributario)
 console.log(gestionTributaria);
 // Agrega un atributo 'alt' a la imagen
 const altImgGestionTributaria = document.querySelector('.imagen-servicio');
-altImgGestionTributaria.alt = 'gestion_contable';
+altImgGestionTributaria.alt = 'gestion_tributaria';
 
 
 
@@ -502,13 +502,13 @@ const servicioGestionEmpresarial = [
 ];
 console.log(`cantidad servicios gestion empresarial:  ${servicioGestionEmpresarial.length}`);
 //variable de ruta img
-const imgGestionEmpresarial = '../multimedia/nuestros_servicios/gestion_empresarial.jpg';
+const imgGestionEmpresarial = './multimedia/nuestros_servicios/gestion_empresarial.jpg';
 //instanciar objeto con clase Servicio
 const gestionEmpresarial = new Servicio(tituloGestionEmpresarial, servicioGestionEmpresarial, imgGestionEmpresarial)
 console.log(servicioGestionEmpresarial);
 // Agrega un atributo 'alt' a la imagen
 const altImgGestionEmpresarial = document.querySelector('.imagen-servicio');
-altImgGestionEmpresarial.alt = 'gestion_contable';
+altImgGestionEmpresarial.alt = 'gestion_empresarial';
 
 
 // propiedades servicio gestion contable posicion [2]
@@ -530,7 +530,7 @@ const servicioGestionContable = [
 ];
 console.log(`cantidad servicios gestion contable:  ${servicioGestionContable.length}`);
 //variable de ruta img
-const imgGestionContable = '../multimedia/nuestros_servicios/gestion_contable.jpg'
+const imgGestionContable = './multimedia/nuestros_servicios/gestion_contable.jpg'
 //instanciar objeto con clase Servicio
 const gestionContable = new Servicio(tituloGestionContable, servicioGestionContable, imgGestionContable);
 console.log(servicioGestionContable);
@@ -550,7 +550,7 @@ const servicioGestionTalentoHumano = [
 ];
 console.log(`cantidad servicios gestion talento humano:  ${servicioGestionTalentoHumano.length}`);
 //variable de ruta img
-const imgGestionTalentoHumano = '../multimedia/nuestros_servicios/talento_humano.jpg'
+const imgGestionTalentoHumano = './multimedia/nuestros_servicios/talento_humano.jpg'
 //instanciar objeto con clase Servicio
 const gestionTalentoHumano = new Servicio(tituloGestionTalentoHumano, servicioGestionTalentoHumano, imgGestionTalentoHumano);
 console.log(servicioGestionTalentoHumano);
@@ -574,7 +574,7 @@ const asesoriaEcosistemaElectronico = [
 ];
 console.log(`cantidad servicios asesoria ecosistema electronico:  ${asesoriaEcosistemaElectronico.length}`);
 //variable de ruta img
-const imgAsesoriaEcosistemaElectronico = '../multimedia/nuestros_servicios/ecosistema_electronico.jpg';
+const imgAsesoriaEcosistemaElectronico = './multimedia/nuestros_servicios/ecosistema_electronico.jpg';
 //instanciar objeto con clase Servicio
 const ecosistemaElectronico = new Servicio(tituloAsesoriaEcosistemaElectronico, asesoriaEcosistemaElectronico, imgAsesoriaEcosistemaElectronico);
 console.log(asesoriaEcosistemaElectronico);
@@ -598,7 +598,7 @@ const asesoriaProcedimientoOrganizacional = [
 ];
 console.log(`cantidad servicios asesoria ecosistema electronico:  ${asesoriaProcedimientoOrganizacional.length}`);
 //variable de ruta img
-const imgProcedimientoOrganizacional = '../multimedia/nuestros_servicios/procedimiento_organizacional.jpg';
+const imgProcedimientoOrganizacional = './multimedia/nuestros_servicios/procedimiento_organizacional.jpg';
 //instanciar objeto con clase Servicio
 const procedimientoOrganizacional = new Servicio(tituloProcedimientoOrganizacional, asesoriaProcedimientoOrganizacional, imgProcedimientoOrganizacional);
 console.log(asesoriaProcedimientoOrganizacional);

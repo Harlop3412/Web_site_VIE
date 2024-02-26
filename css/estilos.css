@@ -76,7 +76,8 @@ html {
   /*cambiar estilos del incono del menu de nav (clase de libreria fontawensome)   linea 76 html*/
   /*sobreescribir clase de bootstrap para quitar borde del icono del menu que aparece por defecto   linea 73 html*/
   /*sobreescribir clase de bootstrap para quitar el borde que se produce al hacer clic (:focus) en el menu  linea 73 html*/
-  /*sobreescribir el flex de la clase para dar espacio entre logo y menú menu   linea 78 html*/ }
+  /*sobreescribir el flex de la clase para dar espacio entre logo y menú menu   linea 78 html*/
+  /*dar ancho y alto a logo*/ }
   .nav__color .color__texto1 {
     text-align: center;
     border: solid #042ebe 1px;
@@ -102,6 +103,8 @@ html {
     box-shadow: none; }
   .nav__color .nav__flex {
     justify-content: space-around; }
+  .nav__color .header__navbar-logo {
+    max-width: 300px; }
 
 /********************************layout_main.scss*****************************/
 /*contenedor imagen 1 y h1 */
@@ -253,7 +256,8 @@ html {
     position: relative;
     z-index: 10; }
   .footer__section-map .img__logo-footer {
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    max-width: 300px; }
   .footer__section-map .footer__section-lista {
     font-size: 1.6em;
     padding: 3rem;
@@ -477,14 +481,18 @@ html {
       background-color: white;
       border-radius: 1rem;
       /*img de cada div galeria */
-      /*clase a algunas img que modifica altura*/
-      /*clase pading img grinsa*/ }
+      /*clase a algunas img que modifica altura logo-contenidos*/
+      /*clase pading img grinsa ancho */ }
       .section__clientes .section__clientes-galery .inicio__galery img {
         border-radius: 1rem; }
       .section__clientes .section__clientes-galery .inicio__galery .inicio__galery-img {
-        height: 100%; }
+        height: 100%;
+        max-width: 300px; }
       .section__clientes .section__clientes-galery .inicio__galery .inicio__galery-img1 {
-        padding: 0 1rem 0 1rem; }
+        padding: 0 1rem 0 1rem;
+        max-width: 300px; }
+      .section__clientes .section__clientes-galery .inicio__galery .logo__empresas {
+        max-width: 300px; }
     .section__clientes .section__clientes-galery .inicio__galery:hover {
       transform: scale(2);
       /* Escala al 120% en hover */

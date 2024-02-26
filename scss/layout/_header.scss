@@ -100,4 +100,9 @@
     .nav__flex {
         justify-content: space-around;
     }
+
+    /*dar ancho y alto a logo*/
+    .header__navbar-logo{
+        max-width: 300px;
+    }
 }

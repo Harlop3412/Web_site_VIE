@@ -128,8 +128,8 @@
             color: $col-primary;
         }
 
-         //esta clase es para evitar que se active el evento de la modal-productos al dar click en servicios, clase solo está en index-incio 
-        .iconoServicioJs{
+        //esta clase es para evitar que se active el evento de la modal-productos al dar click en servicios, clase solo está en index-incio 
+        .iconoServicioJs {
             @extend.icono;
         }
 
@@ -224,14 +224,20 @@
                 border-radius: $space-xsmall ;
             }
 
-            /*clase a algunas img que modifica altura*/
+            /*clase a algunas img que modifica altura logo-contenidos*/
             .inicio__galery-img {
                 height: 100%;
+                max-width: 300px;
             }
 
-            /*clase pading img grinsa*/
+            /*clase pading img grinsa ancho */
             .inicio__galery-img1 {
                 padding: 0 $space-xsmall 0 $space-xsmall;
+                max-width: 300px;
+            }
+
+            .logo__empresas {
+                max-width: 300px;
             }
         }
 

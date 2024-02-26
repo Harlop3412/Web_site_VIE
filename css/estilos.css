@@ -808,6 +808,7 @@ html {
         position: relative;
         top: -5rem;
         right: 0;
+        display: none;
         /*clase icon bootstrap pc*/ }
         .main__section1 .section__icon .icon__pc .icon__main {
           font-size: 14rem; }
@@ -815,6 +816,7 @@ html {
         position: relative;
         bottom: 2rem;
         left: 1.5rem;
+        display: none;
         /*clase icon fontawensome nube*/ }
         .main__section1 .section__icon .icon__nube .fa-brands, .main__section1 .section__icon .icon__nube .header__section1 .icono__phone, .header__section1 .main__section1 .section__icon .icon__nube .icono__phone {
           font-size: 22rem; }
@@ -1008,6 +1010,7 @@ html {
         position: relative;
         top: -5rem;
         right: 0;
+        display: none;
         /*clase icon bootstrap pc*/ }
         .main__section1 .section__icon .icon__pc .icon__main {
           font-size: 14rem; }
@@ -1015,6 +1018,7 @@ html {
         position: relative;
         bottom: 2rem;
         left: 1.5rem;
+        display: none;
         /*clase icon fontawensome nube*/ }
         .main__section1 .section__icon .icon__nube .fa-brands, .main__section1 .section__icon .icon__nube .header__section1 .icono__phone, .header__section1 .main__section1 .section__icon .icon__nube .icono__phone {
           font-size: 22rem; }

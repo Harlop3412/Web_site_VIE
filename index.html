@@ -30,12 +30,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--libreria sweetalert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
     <!--estilos.css-->
     <link rel="stylesheet" href="css/estilos.css">
 
     <!-- Precarga la imagen LCP con una alta prioridad de recuperación para que comience a cargarse con la hoja de estilos. -->
     <link rel="preload" fetchpriority="high" as="image" href="./multimedia/main_section1.jpg" type="image/webp">
+    <!-- Google tag (gtag.js) -->
+    <!-- Script para cargar el código de seguimiento de Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-57P3BYRZTH"></script>
+    <!-- Inicio de un bloque de script -->
+    <script>
+        // Inicialización del objeto global dataLayer si aún no está definido
+        window.dataLayer = window.dataLayer || [];
+        // Declaración de la función gtag() para enviar eventos a Google Analytics
+        function gtag() { dataLayer.push(arguments); }
+        // Configuración del comando 'js' para indicar que se cargó el script de Google Analytics
+        gtag('js', new Date());
+        // Configuración del comando 'config' para establecer el ID de seguimiento de Google Analytics
+        gtag('config', 'G-57P3BYRZTH');
+    </script>
+    <!-- Fin del bloque de script -->
 
     <title>Inicio</title>
 </head>
@@ -424,7 +439,7 @@
                 <a href="#imagenModal">
                     <div class="inicio__galery">
                         <img src="./multimedia/galeria_inicio/logo_grinsa.png" class="inicio__galery-img1"
-                            alt="logo-grinsa" loading="lazy" >
+                            alt="logo-grinsa" loading="lazy">
                     </div>
                     <div class="inicio__galery-h5">
                         <h5>Grinsa Ingeniería SAS</h5>
@@ -433,7 +448,7 @@
                 <a href="#imagenModal">
                     <div class="inicio__galery">
                         <img src="./multimedia/galeria_inicio/logo_vapor.png" alt="logo-vapor" class="logo__empresas"
-                            loading="lazy" >
+                            loading="lazy">
                     </div>
                     <div class="inicio__galery-h5">
                         <h5>Vapor y Mantenimiento SAS</h5>
@@ -442,7 +457,7 @@
                 <a href="#imagenModal">
                     <div class="inicio__galery">
                         <img src="./multimedia/galeria_inicio/logo_corponova.jpg" alt="logo-corponova"
-                            class="logo__empresas" loading="lazy" >
+                            class="logo__empresas" loading="lazy">
                     </div>
                     <div class="inicio__galery-h5">
                         <h5>Corponova Stetic Spa SAS</h5>
@@ -451,7 +466,7 @@
                 <a href="#imagenModal">
                     <div class="inicio__galery">
                         <img src="./multimedia/galeria_inicio/logo_ingnovation.png" alt="logo-ingnovation"
-                            class="logo__empresas" loading="lazy" >
+                            class="logo__empresas" loading="lazy">
                     </div>
                     <div class="inicio__galery-h5">
                         <h5>Ingnovation</h5>
@@ -459,7 +474,7 @@
                 </a>
                 <a href="#imagenModal">
                     <div class="inicio__galery"><img src="./multimedia/galeria_inicio/logo_fitlab.jpeg"
-                            alt="logo-fitlab" loading="lazy" class="logo__empresas" >
+                            alt="logo-fitlab" loading="lazy" class="logo__empresas">
                     </div>
                     <div class="inicio__galery-h5">
                         <h5>Fit Lab</h5>
@@ -475,7 +490,7 @@
                 </a>
                 <a href="#imagenModal">
                     <div class="inicio__galery"><img src="./multimedia/galeria_inicio/logo_public_strategies.jpg"
-                            alt="logo-public-strategies" loading="lazy" class="logo__empresas" >
+                            alt="logo-public-strategies" loading="lazy" class="logo__empresas">
                     </div>
                     <div class="inicio__galery-h5">
                         <h5>Public Estrategies</h5>

@@ -33,6 +33,22 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--estilos.css-->
     <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Google tag (gtag.js) -->
+    <!-- Script para cargar el código de seguimiento de Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-57P3BYRZTH"></script>
+    <!-- Inicio de un bloque de script -->
+    <script>
+        // Inicialización del objeto global dataLayer si aún no está definido
+        window.dataLayer = window.dataLayer || [];
+        // Declaración de la función gtag() para enviar eventos a Google Analytics
+        function gtag() { dataLayer.push(arguments); }
+        // Configuración del comando 'js' para indicar que se cargó el script de Google Analytics
+        gtag('js', new Date());
+        // Configuración del comando 'config' para establecer el ID de seguimiento de Google Analytics
+        gtag('config', 'G-57P3BYRZTH');
+    </script>
+    <!-- Fin del bloque de script -->
+
     <title>Nuestros Clientes</title>
 </head>
 

@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.visionintegralempresarial\.com$ [NC]
+RewriteRule ^(.*)$ https://visionintegralempresarial.com/$1 [L,R=301]

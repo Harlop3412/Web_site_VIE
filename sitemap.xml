@@ -5,27 +5,27 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://visionintegralempresarial.com/quienes-somos</loc>
+        <loc>https://visionintegralempresarial.com/pages/quienes_somos.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://visionintegralempresarial.com/nuestros-clientes</loc>
+        <loc>https://visionintegralempresarial.com/pages/Nuestros_clientes.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://visionintegralempresarial.com/nuestros-productos</loc>
+        <loc>https://visionintegralempresarial.com/pages/nuestros_productos.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://visionintegralempresarial.com/contactenos</loc>
+        <loc>https://visionintegralempresarial.com/pages/contacto.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://visionintegralempresarial.com/nuestros-servicios</loc>
+        <loc>https://visionintegralempresarial.com/pages/nuestros_servicios.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
